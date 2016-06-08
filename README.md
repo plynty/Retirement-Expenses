@@ -28,7 +28,7 @@ Check out the Plynty homepage at https://www.plynty.com/#/
 * Select language to be used during installation.
 * Follow the instructions of the installer.
 
-# * Data*
+# *Data*
 ===========
 #### *How the data was gathered*
 The information for consumer expenditure for the year 2014(the most recent public data from them) was gathered from the Bureau of Labor and Statistics. Both diary and interview survey data was used.
