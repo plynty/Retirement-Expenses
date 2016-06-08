@@ -23,7 +23,7 @@ Check out the Plynty homepage at https://www.plynty.com/#/
 
 #### *How to install R*
 
-* Go to CRAN, click download for whatever computer you are using(Linux, MAcOS, Windows) and download the installer for the latest R version.
+* Go to CRAN, click download for whatever computer you are using(Linux, MacOS, Windows) and download the installer for the latest R version.
 * Click the installer file.
 * Select language to be used during installation.
 * Follow the instructions of the installer.
