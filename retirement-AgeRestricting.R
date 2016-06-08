@@ -1,7 +1,12 @@
 rm(list=ls())
 
+#The location of the cloned github repo on your machine
+#ex. "~/Documents/SuperCool/Retirement-Expenses
+directoryOfRepo <- "~/Documents/Retirement-Expenses"
+setwd(directoryOfRepo)
+
 #Source only necessary if you are lacking the AgeRestricted dataframes
-source('~/Desktop/BLSdocs/data/ageRestricting.R', echo=TRUE)
+source('ageRestricting.R', echo=TRUE)
 
 #Retirement Restriction
 #Diary
