@@ -21,7 +21,7 @@ Options
 # **We used R to analyze the data.**
 ====================================
 
-## *How to install R*
+#### *How to install R*
 
 *Go to CRAN, click download for whatever computer you are using(Linux, MAcOS, Windows) and download the installer for the latest R version.
 *Click the installer file.
