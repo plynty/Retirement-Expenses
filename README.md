@@ -9,7 +9,7 @@ The goal of creating this financial application is to enable everyone plan for a
 
 [logo]: https://www.google.com/search?q=plynty&espv=2&biw=1920&bih=964&tbm=isch&imgil=9167o9lhpBQwiM%253A%253B402upgbBUCcaDM%253Bhttps%25253A%25252F%25252Ftwitter.com%25252Fplynty&source=iu&pf=m&fir=9167o9lhpBQwiM%253A%252C402upgbBUCcaDM%252C_&usg=__X3RuWrIarZNu3C9HexsTZmNqcSw%3D&dpr=1&ved=0ahUKEwi5s9nxwJjNAhXIJB4KHTnHCtIQyjcIMg&ei=tBlYV7mJDsjJeLmOq5AN#imgrc=9167o9lhpBQwiM%3A
 
-Check out the homepage at https://www.plynty.com/#/
+Check out the Plynty homepage at https://www.plynty.com/#/
 How it works.
 
 Demonstration Page
@@ -21,7 +21,7 @@ Options
 # **We used R to analyze the data.**
 ====================================
 
-## *How to install R*
+#### *How to install R*
 
 *Go to CRAN, click download for whatever computer you are using(Linux, MAcOS, Windows) and download the installer for the latest R version.
 *Click the installer file.
