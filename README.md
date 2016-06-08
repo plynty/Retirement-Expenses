@@ -4,7 +4,7 @@ Calculating retirement expenses using the Bureau of Labor and Statistics Consume
 #### Financial planning by your side, on your phone, in a convenient app.
 #### *The goal of creating this financial application is to enable everyone plan for a retirement of their dream.*
 Inline-style:
-![alt text](Insert Image https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwim1fvj85jNAhVFmh4KHZjBCdkQjRwIBw&url=https%3A%2F%2Ftwitter.com%2Fplynty&psig=AFQjCNEDc4WwFBp_wbEAM_faW_XF35a4Ug&ust=1465490602887357 )
+![alt text](Insert Image https://twitter.com/plynty )
 
 
 [logo]: https://www.google.com/search?q=plynty&espv=2&biw=1920&bih=964&tbm=isch&imgil=9167o9lhpBQwiM%253A%253B402upgbBUCcaDM%253Bhttps%25253A%25252F%25252Ftwitter.com%25252Fplynty&source=iu&pf=m&fir=9167o9lhpBQwiM%253A%252C402upgbBUCcaDM%252C_&usg=__X3RuWrIarZNu3C9HexsTZmNqcSw%3D&dpr=1&ved=0ahUKEwi5s9nxwJjNAhXIJB4KHTnHCtIQyjcIMg&ei=tBlYV7mJDsjJeLmOq5AN#imgrc=9167o9lhpBQwiM%3A
