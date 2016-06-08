@@ -3,7 +3,7 @@ Calculating retirement expenses using the Bureau of Labor and Statistics Consume
 
 #### Financial planning by your side, on your phone, in a convenient app.
 The goal of creating this financial application is to enable everyone plan for a retirement of their dream.*
-Inline-style:
+
 ![alt text](Insert Image https://pbs.twimg.com/profile_images/730095911687184384/C34I9Sh-.jpg )
 
 
