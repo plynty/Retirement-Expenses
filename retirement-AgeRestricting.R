@@ -116,6 +116,23 @@ memi143DoubleRestricted <- memi143AgeRestricted[which(memi143AgeRestricted$NEWID
 memi144DoubleRestricted <- memi144AgeRestricted[which(memi144AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
 memi151DoubleRestricted <- memi151AgeRestricted[which(memi151AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
 
+mtbi141xDoubleRestricted <- mtbi141xAgeRestricted[which(mtbi141xAgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+mtbi142DoubleRestricted <- mtbi142AgeRestricted[which(mtbi142AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+mtbi143DoubleRestricted <- mtbi143AgeRestricted[which(mtbi143AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+mtbi144DoubleRestricted <- mtbi144AgeRestricted[which(mtbi144AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+mtbi151DoubleRestricted <- mtbi151AgeRestricted[which(mtbi151AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+
+itbi141xDoubleRestricted <- itbi141xAgeRestricted[which(itbi141xAgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+itbi142DoubleRestricted <- itbi142AgeRestricted[which(itbi142AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+itbi143DoubleRestricted <- itbi143AgeRestricted[which(itbi143AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+itbi144DoubleRestricted <- itbi144AgeRestricted[which(itbi144AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+itbi151DoubleRestricted <- itbi151AgeRestricted[which(itbi151AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+
+itii141xDoubleRestricted <- itii141xAgeRestricted[which(itii141xAgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+itii142DoubleRestricted <- itii142AgeRestricted[which(itii142AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+itii143DoubleRestricted <- itii143AgeRestricted[which(itii143AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+itii144DoubleRestricted <- itii144AgeRestricted[which(itii144AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+itii151DoubleRestricted <- itii151AgeRestricted[which(itii151AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
 
 
 
