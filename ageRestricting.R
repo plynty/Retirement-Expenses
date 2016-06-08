@@ -1,5 +1,12 @@
 rm(list=ls())
 
+#The location of the cloned github repo on your machine
+#ex. "~/Documents/SuperCool/Retirement-Expenses
+directoryOfRepo <- "~/Documents/Retirement-Expenses"
+setwd(directoryOfRepo)
+
+
+
 ###Code below creates the dataframes of BLS CES data that contains every member of a CU that is within an age range 
 
 maxAge <- 64 #inclusive top range for the age group to study
@@ -8,15 +15,15 @@ minAge <- 55 #inclusive bottom range for the age group to study
 #Diary Files
 
 #loading original files
-fmld141 <- read.csv("~/Desktop/BLSdocs/data/diary14/fmld141.csv", stringsAsFactors=FALSE)
-fmld142 <- read.csv("~/Desktop/BLSdocs/data/diary14/fmld142.csv", stringsAsFactors=FALSE)
-fmld143 <- read.csv("~/Desktop/BLSdocs/data/diary14/fmld143.csv", stringsAsFactors=FALSE)
-fmld144 <- read.csv("~/Desktop/BLSdocs/data/diary14/fmld144.csv", stringsAsFactors=FALSE)
+fmld141 <- read.csv("diary14/fmld141.csv", stringsAsFactors=FALSE)
+fmld142 <- read.csv("diary14/fmld142.csv", stringsAsFactors=FALSE)
+fmld143 <- read.csv("diary14/fmld143.csv", stringsAsFactors=FALSE)
+fmld144 <- read.csv("diary14/fmld144.csv", stringsAsFactors=FALSE)
 
-memd141 <- read.csv("~/Desktop/BLSdocs/data/diary14/memd141.csv", stringsAsFactors=FALSE)
-memd142 <- read.csv("~/Desktop/BLSdocs/data/diary14/memd142.csv", stringsAsFactors=FALSE)
-memd143 <- read.csv("~/Desktop/BLSdocs/data/diary14/memd143.csv", stringsAsFactors=FALSE)
-memd144 <- read.csv("~/Desktop/BLSdocs/data/diary14/memd144.csv", stringsAsFactors=FALSE)
+memd141 <- read.csv("diary14/memd141.csv", stringsAsFactors=FALSE)
+memd142 <- read.csv("diary14/memd142.csv", stringsAsFactors=FALSE)
+memd143 <- read.csv("diary14/memd143.csv", stringsAsFactors=FALSE)
+memd144 <- read.csv("diary14/memd144.csv", stringsAsFactors=FALSE)
 
 ## Creating age restriction for memd files
 
@@ -57,20 +64,20 @@ table(memd141AgeRestricted$NEWID %in% fmld141AgeRestricted$NEWID)
 diaryAgeRestrictedNEWIDs <- memd141AgeRestricted$NEWID
 
 #loading in the last three types of diary survey data files
-expd141 <- read.csv("~/Desktop/BLSdocs/data/diary14/expd141.csv", stringsAsFactors=FALSE)
-expd142 <- read.csv("~/Desktop/BLSdocs/data/diary14/expd142.csv", stringsAsFactors=FALSE)
-expd143 <- read.csv("~/Desktop/BLSdocs/data/diary14/expd143.csv", stringsAsFactors=FALSE)
-expd144 <- read.csv("~/Desktop/BLSdocs/data/diary14/expd144.csv", stringsAsFactors=FALSE)
+expd141 <- read.csv("diary14/expd141.csv", stringsAsFactors=FALSE)
+expd142 <- read.csv("diary14/expd142.csv", stringsAsFactors=FALSE)
+expd143 <- read.csv("diary14/expd143.csv", stringsAsFactors=FALSE)
+expd144 <- read.csv("diary14/expd144.csv", stringsAsFactors=FALSE)
 
-dtbd141 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtbd141.csv", stringsAsFactors=FALSE)
-dtbd142 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtbd142.csv", stringsAsFactors=FALSE)
-dtbd143 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtbd143.csv", stringsAsFactors=FALSE)
-dtbd144 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtbd144.csv", stringsAsFactors=FALSE)
+dtbd141 <- read.csv("diary14/dtbd141.csv", stringsAsFactors=FALSE)
+dtbd142 <- read.csv("diary14/dtbd142.csv", stringsAsFactors=FALSE)
+dtbd143 <- read.csv("diary14/dtbd143.csv", stringsAsFactors=FALSE)
+dtbd144 <- read.csv("diary14/dtbd144.csv", stringsAsFactors=FALSE)
 
-dtid141 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtid141.csv", stringsAsFactors=FALSE)
-dtid142 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtid142.csv", stringsAsFactors=FALSE)
-dtid143 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtid143.csv", stringsAsFactors=FALSE)
-dtid144 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtid144.csv", stringsAsFactors=FALSE)
+dtid141 <- read.csv("diary14/dtid141.csv", stringsAsFactors=FALSE)
+dtid142 <- read.csv("diary14/dtid142.csv", stringsAsFactors=FALSE)
+dtid143 <- read.csv("diary14/dtid143.csv", stringsAsFactors=FALSE)
+dtid144 <- read.csv("diary14/dtid144.csv", stringsAsFactors=FALSE)
 
 
 expd141AgeRestricted <- expd141[which(expd141$NEWID %in% diaryAgeRestrictedNEWIDs),]
@@ -105,17 +112,17 @@ dtid141AgeRestricted <- dtid141[which(dtid141$NEWID %in% diaryAgeRestrictedNEWID
 # rm(dtid142AgeRestricted,dtid143AgeRestricted,dtid144AgeRestricted)
 
 ###Interview Files with Fixed Age
-fmli141x <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/fmli141x.csv", stringsAsFactors=FALSE)
-fmli142 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/fmli142.csv", stringsAsFactors=FALSE)
-fmli143 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/fmli143.csv", stringsAsFactors=FALSE)
-fmli144 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/fmli144.csv", stringsAsFactors=FALSE)
-fmli151 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/fmli151.csv", stringsAsFactors=FALSE)
+fmli141x <- read.csv("intrvw14/interview14/fmli141x.csv", stringsAsFactors=FALSE)
+fmli142 <- read.csv("intrvw14/interview14/fmli142.csv", stringsAsFactors=FALSE)
+fmli143 <- read.csv("intrvw14/interview14/fmli143.csv", stringsAsFactors=FALSE)
+fmli144 <- read.csv("intrvw14/interview14/fmli144.csv", stringsAsFactors=FALSE)
+fmli151 <- read.csv("intrvw14/interview14/fmli151.csv", stringsAsFactors=FALSE)
 
-memi141x <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/memi141x.csv", stringsAsFactors=FALSE)
-memi142 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/memi142.csv", stringsAsFactors=FALSE)
-memi143 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/memi143.csv", stringsAsFactors=FALSE)
-memi144 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/memi144.csv", stringsAsFactors=FALSE)
-memi151 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/memi151.csv", stringsAsFactors=FALSE)
+memi141x <- read.csv("intrvw14/interview14/memi141x.csv", stringsAsFactors=FALSE)
+memi142 <- read.csv("intrvw14/interview14/memi142.csv", stringsAsFactors=FALSE)
+memi143 <- read.csv("intrvw14/interview14/memi143.csv", stringsAsFactors=FALSE)
+memi144 <- read.csv("intrvw14/interview14/memi144.csv", stringsAsFactors=FALSE)
+memi151 <- read.csv("intrvw14/interview14/memi151.csv", stringsAsFactors=FALSE)
 
 #creating age restriction for fmli dataframes
 fmli141xAgeRestricted <- fmli141x[which(fmli141x$AGE_REF >= minAge & fmli141x$AGE_REF <= maxAge),]
@@ -162,23 +169,23 @@ interviewAgeRestrictedNEWIDs <- memiAgeRestrictedNEWIDs
 
 
 #loading in dataframes
-mtbi141x <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/mtbi141x.csv", stringsAsFactors=FALSE)
-mtbi142 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/mtbi142.csv", stringsAsFactors=FALSE)
-mtbi143 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/mtbi143.csv", stringsAsFactors=FALSE)
-mtbi144 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/mtbi144.csv", stringsAsFactors=FALSE)
-mtbi151 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/mtbi151.csv", stringsAsFactors=FALSE)
+mtbi141x <- read.csv("intrvw14/interview14/mtbi141x.csv", stringsAsFactors=FALSE)
+mtbi142 <- read.csv("intrvw14/interview14/mtbi142.csv", stringsAsFactors=FALSE)
+mtbi143 <- read.csv("intrvw14/interview14/mtbi143.csv", stringsAsFactors=FALSE)
+mtbi144 <- read.csv("intrvw14/interview14/mtbi144.csv", stringsAsFactors=FALSE)
+mtbi151 <- read.csv("intrvw14/interview14/mtbi151.csv", stringsAsFactors=FALSE)
 
-itbi141x <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itbi141x.csv", stringsAsFactors=FALSE)
-itbi142 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itbi142.csv", stringsAsFactors=FALSE)
-itbi143 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itbi143.csv", stringsAsFactors=FALSE)
-itbi144 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itbi144.csv", stringsAsFactors=FALSE)
-itbi151 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itbi151.csv", stringsAsFactors=FALSE)
+itbi141x <- read.csv("intrvw14/interview14/itbi141x.csv", stringsAsFactors=FALSE)
+itbi142 <- read.csv("intrvw14/interview14/itbi142.csv", stringsAsFactors=FALSE)
+itbi143 <- read.csv("intrvw14/interview14/itbi143.csv", stringsAsFactors=FALSE)
+itbi144 <- read.csv("intrvw14/interview14/itbi144.csv", stringsAsFactors=FALSE)
+itbi151 <- read.csv("intrvw14/interview14/itbi151.csv", stringsAsFactors=FALSE)
 
-itii141x <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itii141x.csv", stringsAsFactors=FALSE)
-itii142 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itii142.csv", stringsAsFactors=FALSE)
-itii143 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itii143.csv", stringsAsFactors=FALSE)
-itii144 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itii144.csv", stringsAsFactors=FALSE)
-itii151 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itii151.csv", stringsAsFactors=FALSE)
+itii141x <- read.csv("intrvw14/interview14/itii141x.csv", stringsAsFactors=FALSE)
+itii142 <- read.csv("intrvw14/interview14/itii142.csv", stringsAsFactors=FALSE)
+itii143 <- read.csv("intrvw14/interview14/itii143.csv", stringsAsFactors=FALSE)
+itii144 <- read.csv("intrvw14/interview14/itii144.csv", stringsAsFactors=FALSE)
+itii151 <- read.csv("intrvw14/interview14/itii151.csv", stringsAsFactors=FALSE)
 
 #creating age restriction for mtbi dataframes
 mtbi141xAgeRestricted <- mtbi141x[which(mtbi141x$NEWID %in% interviewAgeRestrictedNEWIDs),]
@@ -218,15 +225,15 @@ rm(itii141x,itii142,itii143,itii144,itii151)
 # #Diary Files
 # 
 # #loading original files
-# fmld141 <- read.csv("~/Desktop/BLSdocs/data/diary14/fmld141.csv", stringsAsFactors=FALSE)
-# fmld142 <- read.csv("~/Desktop/BLSdocs/data/diary14/fmld142.csv", stringsAsFactors=FALSE)
-# fmld143 <- read.csv("~/Desktop/BLSdocs/data/diary14/fmld143.csv", stringsAsFactors=FALSE)
-# fmld144 <- read.csv("~/Desktop/BLSdocs/data/diary14/fmld144.csv", stringsAsFactors=FALSE)
+# fmld141 <- read.csv("diary14/fmld141.csv", stringsAsFactors=FALSE)
+# fmld142 <- read.csv("diary14/fmld142.csv", stringsAsFactors=FALSE)
+# fmld143 <- read.csv("diary14/fmld143.csv", stringsAsFactors=FALSE)
+# fmld144 <- read.csv("diary14/fmld144.csv", stringsAsFactors=FALSE)
 # 
-# memd141 <- read.csv("~/Desktop/BLSdocs/data/diary14/memd141.csv", stringsAsFactors=FALSE)
-# memd142 <- read.csv("~/Desktop/BLSdocs/data/diary14/memd142.csv", stringsAsFactors=FALSE)
-# memd143 <- read.csv("~/Desktop/BLSdocs/data/diary14/memd143.csv", stringsAsFactors=FALSE)
-# memd144 <- read.csv("~/Desktop/BLSdocs/data/diary14/memd144.csv", stringsAsFactors=FALSE)
+# memd141 <- read.csv("diary14/memd141.csv", stringsAsFactors=FALSE)
+# memd142 <- read.csv("diary14/memd142.csv", stringsAsFactors=FALSE)
+# memd143 <- read.csv("diary14/memd143.csv", stringsAsFactors=FALSE)
+# memd144 <- read.csv("diary14/memd144.csv", stringsAsFactors=FALSE)
 # 
 # ## Creating age restriction for memd files
 # #CU_CODE1 == 1 signifies the reference person
@@ -267,20 +274,20 @@ rm(itii141x,itii142,itii143,itii144,itii151)
 # referenceDiaryAgeRestrictedNEWIDs <- referenceMemdAgeRestrictedNEWIDs
 # 
 # #loading in the last three types of diary survey data files
-# expd141 <- read.csv("~/Desktop/BLSdocs/data/diary14/expd141.csv", stringsAsFactors=FALSE)
-# expd142 <- read.csv("~/Desktop/BLSdocs/data/diary14/expd142.csv", stringsAsFactors=FALSE)
-# expd143 <- read.csv("~/Desktop/BLSdocs/data/diary14/expd143.csv", stringsAsFactors=FALSE)
-# expd144 <- read.csv("~/Desktop/BLSdocs/data/diary14/expd144.csv", stringsAsFactors=FALSE)
+# expd141 <- read.csv("diary14/expd141.csv", stringsAsFactors=FALSE)
+# expd142 <- read.csv("diary14/expd142.csv", stringsAsFactors=FALSE)
+# expd143 <- read.csv("diary14/expd143.csv", stringsAsFactors=FALSE)
+# expd144 <- read.csv("diary14/expd144.csv", stringsAsFactors=FALSE)
 # 
-# dtbd141 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtbd141.csv", stringsAsFactors=FALSE)
-# dtbd142 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtbd142.csv", stringsAsFactors=FALSE)
-# dtbd143 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtbd143.csv", stringsAsFactors=FALSE)
-# dtbd144 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtbd144.csv", stringsAsFactors=FALSE)
+# dtbd141 <- read.csv("diary14/dtbd141.csv", stringsAsFactors=FALSE)
+# dtbd142 <- read.csv("diary14/dtbd142.csv", stringsAsFactors=FALSE)
+# dtbd143 <- read.csv("diary14/dtbd143.csv", stringsAsFactors=FALSE)
+# dtbd144 <- read.csv("diary14/dtbd144.csv", stringsAsFactors=FALSE)
 # 
-# dtid141 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtid141.csv", stringsAsFactors=FALSE)
-# dtid142 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtid142.csv", stringsAsFactors=FALSE)
-# dtid143 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtid143.csv", stringsAsFactors=FALSE)
-# dtid144 <- read.csv("~/Desktop/BLSdocs/data/diary14/dtid144.csv", stringsAsFactors=FALSE)
+# dtid141 <- read.csv("diary14/dtid141.csv", stringsAsFactors=FALSE)
+# dtid142 <- read.csv("diary14/dtid142.csv", stringsAsFactors=FALSE)
+# dtid143 <- read.csv("diary14/dtid143.csv", stringsAsFactors=FALSE)
+# dtid144 <- read.csv("diary14/dtid144.csv", stringsAsFactors=FALSE)
 # 
 # 
 # referenceExpd141AgeRestricted <- referenceExpd141[which(referenceExpd141$NEWID %in% referenceDiaryAgeRestrictedNEWIDs),]
@@ -315,17 +322,17 @@ rm(itii141x,itii142,itii143,itii144,itii151)
 # # # rm(referenceDtid142AgeRestricted,referenceDtid143AgeRestricted,referenceDtid144AgeRestricted)
 # 
 # ###Interview Files with Fixed Age
-# fmli141x <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/fmli141x.csv", stringsAsFactors=FALSE)
-# fmli142 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/fmli142.csv", stringsAsFactors=FALSE)
-# fmli143 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/fmli143.csv", stringsAsFactors=FALSE)
-# fmli144 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/fmli144.csv", stringsAsFactors=FALSE)
-# fmli151 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/fmli151.csv", stringsAsFactors=FALSE)
+# fmli141x <- read.csv("intrvw14/interview14/fmli141x.csv", stringsAsFactors=FALSE)
+# fmli142 <- read.csv("intrvw14/interview14/fmli142.csv", stringsAsFactors=FALSE)
+# fmli143 <- read.csv("intrvw14/interview14/fmli143.csv", stringsAsFactors=FALSE)
+# fmli144 <- read.csv("intrvw14/interview14/fmli144.csv", stringsAsFactors=FALSE)
+# fmli151 <- read.csv("intrvw14/interview14/fmli151.csv", stringsAsFactors=FALSE)
 # 
-# memi141x <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/memi141x.csv", stringsAsFactors=FALSE)
-# memi142 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/memi142.csv", stringsAsFactors=FALSE)
-# memi143 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/memi143.csv", stringsAsFactors=FALSE)
-# memi144 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/memi144.csv", stringsAsFactors=FALSE)
-# memi151 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/memi151.csv", stringsAsFactors=FALSE)
+# memi141x <- read.csv("intrvw14/interview14/memi141x.csv", stringsAsFactors=FALSE)
+# memi142 <- read.csv("intrvw14/interview14/memi142.csv", stringsAsFactors=FALSE)
+# memi143 <- read.csv("intrvw14/interview14/memi143.csv", stringsAsFactors=FALSE)
+# memi144 <- read.csv("intrvw14/interview14/memi144.csv", stringsAsFactors=FALSE)
+# memi151 <- read.csv("intrvw14/interview14/memi151.csv", stringsAsFactors=FALSE)
 # 
 # #creating age restriction for fmli dataframes
 # referenceFmli141xAgeRestricted <- fmli141x[which(fmli141x$AGE_REF >= minAge & fmli141x$AGE_REF <= maxAge),]
@@ -348,23 +355,23 @@ rm(itii141x,itii142,itii143,itii144,itii151)
 # interviewAgeRestrictedNEWIDs <- memiAgeRestrictedNEWIDs
 # 
 # #loading in dataframes
-# mtbi141x <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/mtbi141x.csv", stringsAsFactors=FALSE)
-# mtbi142 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/mtbi142.csv", stringsAsFactors=FALSE)
-# mtbi143 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/mtbi143.csv", stringsAsFactors=FALSE)
-# mtbi144 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/mtbi144.csv", stringsAsFactors=FALSE)
-# mtbi151 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/mtbi151.csv", stringsAsFactors=FALSE)
+# mtbi141x <- read.csv("intrvw14/interview14/mtbi141x.csv", stringsAsFactors=FALSE)
+# mtbi142 <- read.csv("intrvw14/interview14/mtbi142.csv", stringsAsFactors=FALSE)
+# mtbi143 <- read.csv("intrvw14/interview14/mtbi143.csv", stringsAsFactors=FALSE)
+# mtbi144 <- read.csv("intrvw14/interview14/mtbi144.csv", stringsAsFactors=FALSE)
+# mtbi151 <- read.csv("intrvw14/interview14/mtbi151.csv", stringsAsFactors=FALSE)
 # 
-# itbi141x <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itbi141x.csv", stringsAsFactors=FALSE)
-# itbi142 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itbi142.csv", stringsAsFactors=FALSE)
-# itbi143 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itbi143.csv", stringsAsFactors=FALSE)
-# itbi144 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itbi144.csv", stringsAsFactors=FALSE)
-# itbi151 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itbi151.csv", stringsAsFactors=FALSE)
+# itbi141x <- read.csv("intrvw14/interview14/itbi141x.csv", stringsAsFactors=FALSE)
+# itbi142 <- read.csv("intrvw14/interview14/itbi142.csv", stringsAsFactors=FALSE)
+# itbi143 <- read.csv("intrvw14/interview14/itbi143.csv", stringsAsFactors=FALSE)
+# itbi144 <- read.csv("intrvw14/interview14/itbi144.csv", stringsAsFactors=FALSE)
+# itbi151 <- read.csv("intrvw14/interview14/itbi151.csv", stringsAsFactors=FALSE)
 # 
-# itii141x <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itii141x.csv", stringsAsFactors=FALSE)
-# itii142 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itii142.csv", stringsAsFactors=FALSE)
-# itii143 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itii143.csv", stringsAsFactors=FALSE)
-# itii144 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itii144.csv", stringsAsFactors=FALSE)
-# itii151 <- read.csv("~/Desktop/BLSdocs/data/intrvw14/interview14/itii151.csv", stringsAsFactors=FALSE)
+# itii141x <- read.csv("intrvw14/interview14/itii141x.csv", stringsAsFactors=FALSE)
+# itii142 <- read.csv("intrvw14/interview14/itii142.csv", stringsAsFactors=FALSE)
+# itii143 <- read.csv("intrvw14/interview14/itii143.csv", stringsAsFactors=FALSE)
+# itii144 <- read.csv("intrvw14/interview14/itii144.csv", stringsAsFactors=FALSE)
+# itii151 <- read.csv("intrvw14/interview14/itii151.csv", stringsAsFactors=FALSE)
 # 
 # #creating age restriction for mtbi dataframes
 # referenceMtbi141xAgeRestricted <- mtbi141x[which(mtbi141x$NEWID %in% diaryAgeRestrictedNEWIDs),]
