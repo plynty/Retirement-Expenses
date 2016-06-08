@@ -30,7 +30,7 @@ Check out the Plynty homepage at https://www.plynty.com/#/
 
 # *Data*
 ===========
-#### *How the data was gathered*
+##### *How the data was gathered*
 The information for consumer expenditure for the year 2014(the most recent public data from them) was gathered from the Bureau of Labor and Statistics. Both diary and interview survey data was used.
 
 ##### *How the BLS gathers its information*
@@ -47,8 +47,8 @@ http://www.bls.gov/cex/pumd_2014.htm
 * Diary data: http://www.bls.gov/cex/2014/csxdiarydata.pdf
 
 ##### *The Microdata Documentation for 2014*
-Interview data: http://www.bls.gov/cex/2014/csxintvw.pdf
-Diary data: http://www.bls.gov/cex/2014/csxdiary.pdf
+* Interview data: http://www.bls.gov/cex/2014/csxintvw.pdf
+* Diary data: http://www.bls.gov/cex/2014/csxdiary.pdf
 
 ##### *Cleaning the data*
 We are mainly concerned about the age group 55-65.
