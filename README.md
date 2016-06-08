@@ -28,41 +28,41 @@ Options
 *Select language to be used during installation.
 *Follow the instructions of the installer.
 
-# ** Data**
+# * Data*
 ===========
-## *How the data was gathered*
+#### *How the data was gathered*
 The information for consumer expenditure for the year 2014(the most recent public data from them) was gathered from the Bureau of Labor and Statistics. Both diary and interview survey data was used.
 
-## *How the BLS gathers its information*
+#### *How the BLS gathers its information*
 The sample survey guides 
 Interview Survery Information Booklet http://www.bls.gov/cex/2015_information_booklet_ce_305.pdf
 
-## *A getting started guide for using the data in question is given as below:*
-http://www.bls.gov/cex/pumd_novice_guide.pdf
-We have used the ASCII(Comma-Delimited) data at the bottom of this page.
+#### *A getting started guide for using the data in question is given as below:*
+* http://www.bls.gov/cex/pumd_novice_guide.pdf.
+* We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 http://www.bls.gov/cex/pumd_2014.htm
 
-## *To understand the variable names the data documentation is as follows:*
-Interview data: http://www.bls.gov/cex/2014/csxintvwdata.pdf
-Diary data: http://www.bls.gov/cex/2014/csxdiarydata.pdf
+#### *To understand the variable names the data documentation is as follows:*
+* Interview data: http://www.bls.gov/cex/2014/csxintvwdata.pdf
+* Diary data: http://www.bls.gov/cex/2014/csxdiarydata.pdf
 
-## *The Microdata Documentation for 2014*
+#### *The Microdata Documentation for 2014*
 Interview data: http://www.bls.gov/cex/2014/csxintvw.pdf
 Diary data: http://www.bls.gov/cex/2014/csxdiary.pdf
 
-## *Cleaning the data*
+#### *Cleaning the data*
 We are mainly concerned about the age group 55-65.
 
-# **Code**
+## **Code**
 ==========
 
-# **Mathematical Formulas Used**
+## **Mathematical Formulas Used**
 ================================
 
-# **Ratios obtained**
+## **Ratios obtained**
 =====================
 
-# **Conclusion**
+## **Conclusion**
 ===============
 
 
