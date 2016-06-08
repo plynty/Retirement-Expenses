@@ -37,8 +37,8 @@ The information for consumer expenditure for the year 2014(the most recent publi
 The sample survey guides 
 Interview Survery Information Booklet http://www.bls.gov/cex/2015_information_booklet_ce_305.pdf
 
-##### *A getting started guide for using the data in question is given as below:
-* http://www.bls.gov/cex/pumd_novice_guide.pdf.*
+##### *A getting started guide for using the data in question is given as below:*
+* http://www.bls.gov/cex/pumd_novice_guide.pdf.
 
 We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 * http://www.bls.gov/cex/pumd_2014.htm
