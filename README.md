@@ -1,7 +1,7 @@
 # Retirement-Expenses
-\begin{center}
-#### Financial planning by your side, on your phone, in a convenient app.
-\end{center}
+
+##### ->Financial planning by your side, on your phone, in a convenient app.<-
+
 
 ## Aim
 The current retirement approach does not include everyone yet when we all understand money better, intelligent financial plans can me made by all individuals. By taking individual goals plynty is here to create indivifualized planning for investing.
