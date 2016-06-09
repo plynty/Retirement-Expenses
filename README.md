@@ -1,7 +1,7 @@
 # Retirement-Expenses
 
 ##### 
-->![plynty logo](https://pbs.twimg.com/profile_images/730095911687184384/C34I9Sh-.jpg)<-
+>![plynty logo](https://pbs.twimg.com/profile_images/730095911687184384/C34I9Sh-.jpg)<
 
 Financial planning by your side, on your phone, in a convenient app.
 
@@ -16,8 +16,6 @@ plynty(c) is a rigorous, helpful, cheap and affordable 24/7 application that sav
 Our goal is to calculate valid expenses using the Bureau of Labor and Statistics Consumer Expenditure information http://www.bls.gov/cex/ from the interview and survey data.
 
 + Using the expenses of the age group 55-64 assuming those are the expenses that will be carried onto retirement and that using expenses before then would not be accurate as most of the expenses will be gone eg. college tuition.
-
-![plynty logo](https://pbs.twimg.com/profile_images/730095911687184384/C34I9Sh-.jpg)
 
 
 Check out the Plynty homepage at https://www.plynty.com/#/
