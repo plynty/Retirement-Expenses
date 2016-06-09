@@ -1,0 +1,29 @@
+####Remove Diary dataframes
+# Original Diary dataframes
+rm(dtbd141,dtbd142,dtbd143,dtbd144)
+rm(dtid141,dtid142,dtid143,dtid144)
+rm(expd141,expd142,expd143,expd144)
+rm(fmld141,fmld142,fmld143,fmld144)
+rm(memd141,memd142,memd143,memd144)
+
+# Original Interview dataframes
+rm(fmli141x,fmli142,fmli143,fmli144,fmli151)
+rm(memi141x,memi142,memi143,memi144,memi151)
+rm(mtbi141x,mtbi142,mtbi143,mtbi144,mtbi151)
+rm(itbi141x,itbi142,itbi143,itbi144,itbi151)
+rm(itii141x,itii142,itii143,itii144,itii151)
+
+# Age Restricted Diary dataframes
+rm(dtbd141AgeRestricted,dtid141AgeRestricted , expd141AgeRestricted)
+rm(fmld141AgeRestricted,fmld142AgeRestricted, fmld143AgeRestricted,fmld144AgeRestricted)
+rm(memd141AgeRestricted,memd142AgeRestricted,memd143AgeRestricted,memd144AgeRestricted)
+
+# Age Restricted Interview dataframes
+rm(fmli141xAgeRestricted,fmli142AgeRestricted, fmli143AgeRestricted, fmli144AgeRestricted, fmli151AgeRestricted)
+rm(memi141xAgeRestricted,memi142AgeRestricted, memi143AgeRestricted, memi144AgeRestricted, memi151AgeRestricted)
+rm(mtbi141xAgeRestricted,mtbi142AgeRestricted, mtbi143AgeRestricted, mtbi144AgeRestricted, mtbi151AgeRestricted)
+rm(itbi141xAgeRestricted,itbi142AgeRestricted, itbi143AgeRestricted, itbi144AgeRestricted, itbi151AgeRestricted)
+rm(itii141xAgeRestricted,itii142AgeRestricted, itii143AgeRestricted, itii144AgeRestricted, itii151AgeRestricted)
+
+# Miscellaneous vectors
+rm(fmliAgeRestrictedNEWIDs, memdAgeRestrictedNEWIDs, memiAgeRestrictedNEWIDs, diaryAgeRestrictedNEWIDs)

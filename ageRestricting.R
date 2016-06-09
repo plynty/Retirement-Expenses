@@ -208,13 +208,6 @@ itii143AgeRestricted <- itii143[which(itii143$NEWID %in% interviewAgeRestrictedN
 itii144AgeRestricted <- itii144[which(itii144$NEWID %in% interviewAgeRestrictedNEWIDs),]
 itii151AgeRestricted <- itii151[which(itii151$NEWID %in% interviewAgeRestrictedNEWIDs),]
 
-#removing non-age restricted dataframes
-rm(fmli141x,fmli142,fmli143,fmli144,fmli151)
-rm(memi141x,memi142,memi143,memi144,memi151)
-rm(mtbi141x,mtbi142,mtbi143,mtbi144,mtbi151)
-rm(itbi141x,itbi142,itbi143,itbi144,itbi151)
-rm(itii141x,itii142,itii143,itii144,itii151)
-
 ################################################################################################################################################################
 # 
 # ###Code below creates the dataframes of BLS CES data that contains Reference people that are within an age range

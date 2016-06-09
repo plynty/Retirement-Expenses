@@ -135,17 +135,6 @@ itii144DoubleRestricted <- itii144AgeRestricted[which(itii144AgeRestricted$NEWID
 itii151DoubleRestricted <- itii151AgeRestricted[which(itii151AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
 
 
-
-#cleaning up environment after running the script
-rm(diaryNonRetiredAgedNEWIDs1,diaryNonRetiredAgedNEWIDs2,diaryNonRetiredAgedNEWIDs3,diaryNonRetiredAgedNEWIDs4,diaryNonRetiredAgedNEWIDs5,diaryNonRetiredAgedNEWIDs6,diaryNonRetiredAgedNEWIDs7,diaryNonRetiredAgedNEWIDs8)
-rm(interviewNonRetiredAgedNEWIDs1,interviewNonRetiredAgedNEWIDs2,interviewNonRetiredAgedNEWIDs3,interviewNonRetiredAgedNEWIDs4,interviewNonRetiredAgedNEWIDs5,interviewNonRetiredAgedNEWIDs6,interviewNonRetiredAgedNEWIDs7,interviewNonRetiredAgedNEWIDs8,interviewNonRetiredAgedNEWIDs9,interviewNonRetiredAgedNEWIDs10)
-rm(dtbd141AgeRestricted,dtid141AgeRestricted)
-
-rm(memi141xAgeRestricted,memi142AgeRestricted,memi143AgeRestricted,memi144AgeRestricted,memi151AgeRestricted)
-rm(memi141xAgeRestricted,memi142AgeRestricted,memi143AgeRestricted,memi144AgeRestricted,memi151AgeRestricted)
-
-
-
 ##############################################################################################################################################
 # Code for reference person only
 # 
