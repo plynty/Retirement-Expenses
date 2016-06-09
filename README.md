@@ -17,13 +17,10 @@ Our goal is to calculate valid expenses using the Bureau of Labor and Statistics
 
 
 Check out the Plynty homepage at https://www.plynty.com/#/
-### * How it works.
+###### * How it works.
 
-* Demonstration Page
+##### * Demonstration Views
 
-* The Views
-
-* Options
  
 # **We used R to analyze the data.**
 ====================================
