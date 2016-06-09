@@ -11,13 +11,13 @@ The current retirement approach does not include everyone yet when we all unders
 plynty(c) is a rigorous, helpful, cheap and affordable 24/7 application that saves on fees to have middlemen. The goal of creating this financial application is to enable everyone plan for a retirement of their dream.
 
 ##### Methodology used
-Our goal is to calculate valid expenses using the Bureau of Labor and Statistics Consumer Expenditure information from the interview and survey data.
+Our goal is to calculate valid expenses using the Bureau of Labor and Statistics Consumer Expenditure information http://www.bls.gov/cex/ from the interview and survey data.
 
 ![plynty logo](https://pbs.twimg.com/profile_images/730095911687184384/C34I9Sh-.jpg)
 
 
 Check out the Plynty homepage at https://www.plynty.com/#/
-* How it works.
+### * How it works.
 
 * Demonstration Page
 
