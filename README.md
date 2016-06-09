@@ -5,13 +5,14 @@ Financial planning by your side, on your phone, in a convenient app.
 
 
 ## Aim
-The current retirement approach does not include everyone yet when we all understand money better, intelligent financial plans can me made by all individuals. By taking individual goals plynty is here to create indivifualized planning for investing.
+The current retirement approach does not include everyone. However, when we all understand money better intelligent financial plans can me made by all. By taking individual goals, plynty is here to create indivifualized planning for investing.
 
 ##### Why is this necessary?
 plynty(c) is a rigorous, helpful, cheap and affordable 24/7 application that saves on fees to have middlemen. The goal of creating this financial application is to enable everyone plan for a retirement of their dream.
 
 ##### Methodology used
 Our goal is to calculate valid expenses using the Bureau of Labor and Statistics Consumer Expenditure information http://www.bls.gov/cex/ from the interview and survey data.
+..* Using the expenses of the age group 55-64 assuming those are the expenses that will be carried onto retirement and that using expenses before then would not be accurate as most of the expenses will be gone eg. college tuition.
 
 ![plynty logo](https://pbs.twimg.com/profile_images/730095911687184384/C34I9Sh-.jpg)
 
@@ -31,6 +32,8 @@ Check out the Plynty homepage at https://www.plynty.com/#/
 * Click the installer file.
 * Select language to be used during installation.
 * Follow the instructions of the installer.
+
+#### R packages used
 
 # *Data*
 ===========
@@ -56,9 +59,9 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 * Diary data: http://www.bls.gov/cex/2014/csxdiary.pdf
 
 ##### *Filtering the data*
-We are mainly concerned about the age group 55-65.
 
-## **Code**
+
+## **Code used**
 ==========
 
 ## **Mathematical Formulas Used**
