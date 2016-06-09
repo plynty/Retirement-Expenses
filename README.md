@@ -7,7 +7,7 @@
 ## Aim
 The current retirement approach does not include everyone yet when we all understand money better, intelligent financial plans can me made by all individuals. By taking individual goals plynty is here to create indivifualized planning for investing.
 
-##### Why is this necessary?
+######## Why is this necessary?
 plynty(c) is a rigorous, helpful, cheap and affordable 24/7 application that saves on fees to have middlemen. The goal of creating this financial application is to enable everyone plan for a retirement of their dream.
 
 ##### Methodology used
