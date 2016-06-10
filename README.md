@@ -14,6 +14,8 @@ plynty(c) is a rigorous, helpful, cheap and affordable 24/7 application that sav
 
 ##### Methodology used
 Our goal is to calculate valid expenses using the Bureau of Labor and Statistics Consumer Expenditure information http://www.bls.gov/cex/ from the interview and survey data.
+##### Why BlS data?
+The BLS collects comprehensive information on the spending habits of Americans.
 
 + Using the expenses of the age group 55-64, we assume those are the expenses that will be carried onto retirement and that using expenses before then would not be accurate as most of the expenses will be gone eg. college tuition.
 
