@@ -59,6 +59,9 @@ lines(density(diaryIncomeVector, adjust = 2),lwd=2, col = "purple")
 lines(density(diaryIncomeVector, adjust = 3),lwd=2)
 summary(diaryIncomeVector)
 
+#entire population histogram
+hist(dtbd141$AMOUNT[which(dtbd141$UCC == correctUccCode)],breaks = 100, main = "Income Distribution of Data", xlab = "Annual Income")
+
 #Creating income vectors for brackets
 bracket1IncomeVector <- dtbd141DoubleRestricted[which(dtbd141DoubleRestricted$NEWID %in% diaryBracket1NEWIDs & dtbd141DoubleRestricted$UCC == correctUccCode),"AMOUNT"]
 bracket2IncomeVector <- dtbd141DoubleRestricted[which(dtbd141DoubleRestricted$NEWID %in% diaryBracket2NEWIDs & dtbd141DoubleRestricted$UCC == correctUccCode),"AMOUNT"]
@@ -114,5 +117,7 @@ min(itii141xDoubleRestricted[which(itii141xDoubleRestricted$UCC==980000),"VALUE"
 ##creating the incomem column
 #for each NEWID
 for(x in 1:length(unique(itii141xDoubleRestricted$NEWID))){
-  for(y in 1:length(itii141xDoubleRestricted))
+  for(y in 1:length(itii141xDoubleRestricted)){
+    
+  }
 }

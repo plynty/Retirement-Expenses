@@ -11,6 +11,7 @@ setwd(directoryOfRepo)
 
 maxAge <- 64 #inclusive top range for the age group to study
 minAge <- 55 #inclusive bottom range for the age group to study
+validAgeVecotr <- seq(minAge,maxAge)
 
 #Diary Files
 
@@ -28,21 +29,20 @@ memd144 <- read.csv("diary14/memd144.csv", stringsAsFactors=FALSE)
 ## Creating age restriction for memd files
 
 #Restricts based on anyone in the CU's age
-memd141AgeRestricted <- memd141[which(memd141$AGE >= minAge & memd141$AGE <= maxAge),]
-memd142AgeRestricted <- memd141[which(memd141$AGE >= minAge & memd141$AGE <= maxAge),]
-memd143AgeRestricted <- memd141[which(memd141$AGE >= minAge & memd141$AGE <= maxAge),]
-memd144AgeRestricted <- memd141[which(memd141$AGE >= minAge & memd141$AGE <= maxAge),]
-
+memd141AgeRestricted <- filter(memd141, AGE >= minAge & AGE <= maxAge)
+memd142AgeRestricted <- filter(memd142, AGE >= minAge & AGE <= maxAge)
+memd143AgeRestricted <- filter(memd143, AGE >= minAge & AGE <= maxAge)
+memd144AgeRestricted <- filter(memd144, AGE >= minAge & AGE <= maxAge)
 #vector of NEWIDs of CU's that are within the age range (The number of times the NEWID is present represents the number of people in the CU that are within that age range)
 memdAgeRestrictedNEWIDs <- memd141AgeRestricted$NEWID
 table(memdAgeRestrictedNEWIDs)
 
 #creating age restriction for fmld files
 #restricts only based on the reference person's age
-fmld141AgeRestricted <- fmld141[which(fmld141$AGE_REF >= minAge & fmld141$AGE_REF <= maxAge),]
-fmld142AgeRestricted <- fmld141[which(fmld141$AGE_REF >= minAge & fmld141$AGE_REF <= maxAge),]
-fmld143AgeRestricted <- fmld141[which(fmld141$AGE_REF >= minAge & fmld141$AGE_REF <= maxAge),]
-fmld144AgeRestricted <- fmld141[which(fmld141$AGE_REF >= minAge & fmld141$AGE_REF <= maxAge),]
+fmld141AgeRestricted <- filter(fmld141,AGE_REF >= minAge & AGE_REF <= maxAge)
+fmld142AgeRestricted <- filter(fmld142,AGE_REF >= minAge & AGE_REF <= maxAge)
+fmld143AgeRestricted <- filter(fmld143,AGE_REF >= minAge & AGE_REF <= maxAge)
+fmld144AgeRestricted <- filter(fmld144,AGE_REF >= minAge & AGE_REF <= maxAge)
 
 #Checking to see if all the NEWIDs are the same for each dataframe type
 #proof using transitive property
@@ -80,7 +80,7 @@ dtid143 <- read.csv("diary14/dtid143.csv", stringsAsFactors=FALSE)
 dtid144 <- read.csv("diary14/dtid144.csv", stringsAsFactors=FALSE)
 
 
-expd141AgeRestricted <- expd141[which(expd141$NEWID %in% diaryAgeRestrictedNEWIDs),]
+expd141AgeRestricted <- expd141, NEWID %in% diaryAgeRestrictedNEWIDs),]
 # #all files below do not contain the NEWIDs that are within the age range
 # expd142AgeRestricted <- expd142[which(expd142$NEWID %in% diaryAgeRestrictedNEWIDs),]
 # expd143AgeRestricted <- expd143[which(expd143$NEWID %in% diaryAgeRestrictedNEWIDs),]
@@ -125,11 +125,11 @@ memi144 <- read.csv("intrvw14/interview14/memi144.csv", stringsAsFactors=FALSE)
 memi151 <- read.csv("intrvw14/interview14/memi151.csv", stringsAsFactors=FALSE)
 
 #creating age restriction for fmli dataframes
-fmli141xAgeRestricted <- fmli141x[which(fmli141x$AGE_REF >= minAge & fmli141x$AGE_REF <= maxAge),]
-fmli142AgeRestricted <- fmli142[which(fmli142$AGE_REF >= minAge & fmli142$AGE_REF <= maxAge),]
-fmli143AgeRestricted <- fmli143[which(fmli143$AGE_REF >= minAge & fmli143$AGE_REF <= maxAge),]
-fmli144AgeRestricted <- fmli144[which(fmli144$AGE_REF >= minAge & fmli144$AGE_REF <= maxAge),]
-fmli151AgeRestricted <- fmli151[which(fmli151$AGE_REF >= minAge & fmli151$AGE_REF <= maxAge),]
+fmli141xAgeRestricted <- filter(fmli141x, AGE_REF >= minAge & AGE_REF <= maxAge)
+fmli142AgeRestricted <- filter(fmli142, AGE_REF >= minAge & AGE_REF <= maxAge)
+fmli143AgeRestricted <- filter(fmli143, AGE_REF >= minAge & AGE_REF <= maxAge)
+fmli144AgeRestricted <- filter(fmli144, AGE_REF >= minAge & AGE_REF <= maxAge)
+fmli151AgeRestricted <- filter(fmli151, AGE_REF >= minAge & AGE_REF <= maxAge)
 
 #testing to see if there are any of the same NEWIDs in different files
 table(fmli141xAgeRestricted$NEWID %in% fmli142AgeRestricted$NEWID)
@@ -142,11 +142,11 @@ table(fmli151AgeRestricted$NEWID %in% fmli141xAgeRestricted$NEWID)
 fmliAgeRestrictedNEWIDs <- c(fmli141xAgeRestricted$NEWID,fmli142AgeRestricted$NEWID,fmli143AgeRestricted$NEWID,fmli144AgeRestricted$NEWID,fmli151AgeRestricted$NEWID)
 
 #creating age restriction for memi dataframes
-memi141xAgeRestricted <- memi141x[which(memi141x$AGE >= minAge & memi141x$AGE <= maxAge),]
-memi142AgeRestricted <- memi142[which(memi142$AGE >= minAge & memi142$AGE <= maxAge),]
-memi143AgeRestricted <- memi143[which(memi143$AGE >= minAge & memi143$AGE <= maxAge),]
-memi144AgeRestricted <- memi144[which(memi144$AGE >= minAge & memi144$AGE <= maxAge),]
-memi151AgeRestricted <- memi151[which(memi151$AGE >= minAge & memi151$AGE <= maxAge),]
+memi141xAgeRestricted <- filter(memi141x,AGE >= minAge & AGE <= maxAge)
+memi142AgeRestricted <- filter(memi142,AGE >= minAge & AGE <= maxAge)
+memi143AgeRestricted <- filter(memi143,AGE >= minAge & AGE <= maxAge)
+memi144AgeRestricted <- filter(memi144,AGE >= minAge & AGE <= maxAge)
+memi151AgeRestricted <- filter(memi151,AGE >= minAge & AGE <= maxAge)
 
 #testing to see if there are any of the same NEWIDs in different files
 table(memi141xAgeRestricted$NEWID %in% memi142AgeRestricted$NEWID)
