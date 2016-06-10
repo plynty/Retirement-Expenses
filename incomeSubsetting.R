@@ -108,3 +108,11 @@ summary(bracket11IncomeVector)
 
 ###Interview
 
+#The problem with itii files min < 0
+min(itii141xDoubleRestricted[which(itii141xDoubleRestricted$UCC==980000),"VALUE"])
+
+##creating the incomem column
+#for each NEWID
+for(x in 1:length(unique(itii141xDoubleRestricted$NEWID))){
+  for(y in 1:length(itii141xDoubleRestricted))
+}
