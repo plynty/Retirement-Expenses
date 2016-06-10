@@ -13,14 +13,14 @@ source('ageRestricting.R', echo=TRUE)
 #for both anyone in the CU
 #WHYNWRK1 - reason why reference person did not work during the past 12 months 1 = Retired
 #WHYNWRK2 - reason why spouse did not work during the past 12 months 1 = Retired
-diaryNonRetiredAgedNEWIDs1 <- fmld141AgeRestricted[which(fmld141AgeRestricted$WHYNWRK1 != 1 | fmld141AgeRestricted$WHYNWRK2 != 1),"NEWID"]
-diaryNonRetiredAgedNEWIDs2 <- fmld142AgeRestricted[which(fmld142AgeRestricted$WHYNWRK1 != 1 | fmld142AgeRestricted$WHYNWRK2 != 1),"NEWID"]
-diaryNonRetiredAgedNEWIDs3 <- fmld143AgeRestricted[which(fmld143AgeRestricted$WHYNWRK1 != 1 | fmld143AgeRestricted$WHYNWRK2 != 1),"NEWID"]
-diaryNonRetiredAgedNEWIDs4 <- fmld144AgeRestricted[which(fmld144AgeRestricted$WHYNWRK1 != 1 | fmld144AgeRestricted$WHYNWRK2 != 1),"NEWID"]
-diaryNonRetiredAgedNEWIDs5 <- memd141AgeRestricted[which(memd141AgeRestricted$OCCUEARN != 930),"NEWID"]
-diaryNonRetiredAgedNEWIDs6 <- memd142AgeRestricted[which(memd142AgeRestricted$OCCUEARN != 930),"NEWID"]
-diaryNonRetiredAgedNEWIDs7 <- memd143AgeRestricted[which(memd143AgeRestricted$OCCUEARN != 930),"NEWID"]
-diaryNonRetiredAgedNEWIDs8 <- memd144AgeRestricted[which(memd144AgeRestricted$OCCUEARN != 930),"NEWID"]
+diaryNonRetiredAgedNEWIDs1 <- filter(fmld141AgeRestricted, WHYNWRK1 != 1 | WHYNWRK2 != 1)$NEWID
+diaryNonRetiredAgedNEWIDs2 <- filter(fmld142AgeRestricted, WHYNWRK1 != 1 | WHYNWRK2 != 1)$NEWID
+diaryNonRetiredAgedNEWIDs3 <- filter(fmld143AgeRestricted, WHYNWRK1 != 1 | WHYNWRK2 != 1)$NEWID
+diaryNonRetiredAgedNEWIDs4 <- filter(fmld144AgeRestricted, WHYNWRK1 != 1 | WHYNWRK2 != 1)$NEWID
+diaryNonRetiredAgedNEWIDs5 <- filter(memd141AgeRestricted, OCCUEARN != 930)$NEWID
+diaryNonRetiredAgedNEWIDs6 <- filter(memd142AgeRestricted, OCCUEARN != 930)$NEWID
+diaryNonRetiredAgedNEWIDs7 <- filter(memd143AgeRestricted, OCCUEARN != 930)$NEWID
+diaryNonRetiredAgedNEWIDs8 <- filter(memd144AgeRestricted, OCCUEARN != 930)$NEWID
 
 #proving that all NEWIDs form the same dataframe type are equal
 table(diaryNonRetiredAgedNEWIDs1 %in% diaryNonRetiredAgedNEWIDs2)
@@ -72,16 +72,16 @@ dtid141DoubleRestricted <- dtid141AgeRestricted[which(dtid141AgeRestricted$NEWID
 # #**************************************************************************************************************************
 
 
-interviewNonRetiredAgedNEWIDs1 <- fmli141xAgeRestricted[which(fmli141xAgeRestricted$INCNONW1 != 1 | fmli141xAgeRestricted$INCNONW2 != 1),"NEWID"]
-interviewNonRetiredAgedNEWIDs2 <- fmli142AgeRestricted[which(fmli142AgeRestricted$INCNONW1 != 1 | fmli142AgeRestricted$INCNONW2 != 1),"NEWID"]
-interviewNonRetiredAgedNEWIDs3 <- fmli143AgeRestricted[which(fmli143AgeRestricted$INCNONW1 != 1 | fmli143AgeRestricted$INCNONW2 != 1),"NEWID"]
-interviewNonRetiredAgedNEWIDs4 <- fmli144AgeRestricted[which(fmli144AgeRestricted$INCNONW1 != 1 | fmli144AgeRestricted$INCNONW2 != 1),"NEWID"]
-interviewNonRetiredAgedNEWIDs5 <- fmli151AgeRestricted[which(fmli151AgeRestricted$INCNONW1 != 1 | fmli151AgeRestricted$INCNONW2 != 1),"NEWID"]
-interviewNonRetiredAgedNEWIDs6 <- memi141xAgeRestricted[which(memi141xAgeRestricted$INCNONWK != 1),"NEWID"]
-interviewNonRetiredAgedNEWIDs7 <- memi142AgeRestricted[which(memi142AgeRestricted$INCNONWK != 1),"NEWID"]
-interviewNonRetiredAgedNEWIDs8 <- memi143AgeRestricted[which(memi143AgeRestricted$INCNONWK != 1),"NEWID"]
-interviewNonRetiredAgedNEWIDs9 <- memi144AgeRestricted[which(memi144AgeRestricted$INCNONWK != 1),"NEWID"]
-interviewNonRetiredAgedNEWIDs10 <- memi151AgeRestricted[which(memi151AgeRestricted$INCNONWK != 1),"NEWID"]
+interviewNonRetiredAgedNEWIDs1 <- filter(fmli141xAgeRestricted, INCNONW1 != 1 | INCNONW2 != 1)$NEWID
+interviewNonRetiredAgedNEWIDs2 <- filter(fmli142AgeRestricted, INCNONW1 != 1 | INCNONW2 != 1)$NEWID
+interviewNonRetiredAgedNEWIDs3 <- filter(fmli143AgeRestricted, INCNONW1 != 1 | INCNONW2 != 1)$NEWID
+interviewNonRetiredAgedNEWIDs4 <- filter(fmli144AgeRestricted, INCNONW1 != 1 | INCNONW2 != 1)$NEWID
+interviewNonRetiredAgedNEWIDs5 <- filter(fmli151AgeRestricted, INCNONW1 != 1 | INCNONW2 != 1)$NEWID
+interviewNonRetiredAgedNEWIDs6 <- filter(memi141xAgeRestricted, INCNONWK != 1)$NEWID
+interviewNonRetiredAgedNEWIDs7 <- filter(memi142AgeRestricted, INCNONWK != 1)$NEWID
+interviewNonRetiredAgedNEWIDs8 <- filter(memi143AgeRestricted, INCNONWK != 1)$NEWID
+interviewNonRetiredAgedNEWIDs9 <- filter(memi144AgeRestricted, INCNONWK != 1)$NEWID
+interviewNonRetiredAgedNEWIDs10 <- filter(memi151AgeRestricted, INCNONWK != 1)$NEWID
 
 table(interviewNonRetiredAgedNEWIDs1 %in% interviewNonRetiredAgedNEWIDs2)
 table(interviewNonRetiredAgedNEWIDs2 %in% interviewNonRetiredAgedNEWIDs3)
@@ -98,9 +98,6 @@ table(interviewNonRetiredAgedNEWIDs9 %in% interviewNonRetiredAgedNEWIDs10)
 table(interviewNonRetiredAgedNEWIDs10 %in% interviewNonRetiredAgedNEWIDs6)
 
 memiNonRetiredAgedNEWIDs <- c(interviewNonRetiredAgedNEWIDs6,interviewNonRetiredAgedNEWIDs7,interviewNonRetiredAgedNEWIDs8, interviewNonRetiredAgedNEWIDs9, interviewNonRetiredAgedNEWIDs10)
-
-table(fmliNonRetiredAgedNEWIDs %in% memiNonRetiredAgedNEWIDs)
-table(memiNonRetiredAgedNEWIDs %in% fmliNonRetiredAgedNEWIDs)
 
 interviewNonRetiredAgedNEWIDs <- unique(c(fmliNonRetiredAgedNEWIDs,memiNonRetiredAgedNEWIDs))
 
