@@ -1,4 +1,4 @@
-rm(list=ls())
+#rm(list=ls())
 
 #The location of the cloned github repo on your machine
 #ex. "~/Documents/SuperCool/Retirement-Expenses
@@ -22,23 +22,8 @@ diaryNonRetiredAgedNEWIDs6 <- filter(memd142AgeRestricted, OCCUEARN != 930)$NEWI
 diaryNonRetiredAgedNEWIDs7 <- filter(memd143AgeRestricted, OCCUEARN != 930)$NEWID
 diaryNonRetiredAgedNEWIDs8 <- filter(memd144AgeRestricted, OCCUEARN != 930)$NEWID
 
-#proving that all NEWIDs form the same dataframe type are equal
-table(diaryNonRetiredAgedNEWIDs1 %in% diaryNonRetiredAgedNEWIDs2)
-table(diaryNonRetiredAgedNEWIDs2 %in% diaryNonRetiredAgedNEWIDs3)
-table(diaryNonRetiredAgedNEWIDs3 %in% diaryNonRetiredAgedNEWIDs4)
-table(diaryNonRetiredAgedNEWIDs4 %in% diaryNonRetiredAgedNEWIDs1)
-
-table(diaryNonRetiredAgedNEWIDs5 %in% diaryNonRetiredAgedNEWIDs6)
-table(diaryNonRetiredAgedNEWIDs6 %in% diaryNonRetiredAgedNEWIDs7)
-table(diaryNonRetiredAgedNEWIDs7 %in% diaryNonRetiredAgedNEWIDs8)
-table(diaryNonRetiredAgedNEWIDs8 %in% diaryNonRetiredAgedNEWIDs5)
-
-#checking which NEWIDs to use
-table(diaryNonRetiredAgedNEWIDs8 %in% diaryNonRetiredAgedNEWIDs1)
-table(diaryNonRetiredAgedNEWIDs1 %in% diaryNonRetiredAgedNEWIDs8)
-
 #setting the NEWIDs to subset by
-diaryNonRetiredAgeRestrictedNEWIDs <- diaryNonRetiredAgedNEWIDs8
+diaryNonRetiredAgeRestrictedNEWIDs <- unique(c(diaryNonRetiredAgedNEWIDs1,diaryNonRetiredAgedNEWIDs2,diaryNonRetiredAgedNEWIDs3,diaryNonRetiredAgedNEWIDs4,diaryNonRetiredAgedNEWIDs5,diaryNonRetiredAgedNEWIDs6,diaryNonRetiredAgedNEWIDs7,diaryNonRetiredAgedNEWIDs8))
 
 fmld141DoubleRestricted <- fmld141AgeRestricted[which(fmld141AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
 fmld142DoubleRestricted <- fmld142AgeRestricted[which(fmld142AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
@@ -83,23 +68,7 @@ interviewNonRetiredAgedNEWIDs8 <- filter(memi143AgeRestricted, INCNONWK != 1)$NE
 interviewNonRetiredAgedNEWIDs9 <- filter(memi144AgeRestricted, INCNONWK != 1)$NEWID
 interviewNonRetiredAgedNEWIDs10 <- filter(memi151AgeRestricted, INCNONWK != 1)$NEWID
 
-table(interviewNonRetiredAgedNEWIDs1 %in% interviewNonRetiredAgedNEWIDs2)
-table(interviewNonRetiredAgedNEWIDs2 %in% interviewNonRetiredAgedNEWIDs3)
-table(interviewNonRetiredAgedNEWIDs3 %in% interviewNonRetiredAgedNEWIDs4)
-table(interviewNonRetiredAgedNEWIDs4 %in% interviewNonRetiredAgedNEWIDs5)
-table(interviewNonRetiredAgedNEWIDs5 %in% interviewNonRetiredAgedNEWIDs1)
-
-fmliNonRetiredAgedNEWIDs <- c(interviewNonRetiredAgedNEWIDs1,interviewNonRetiredAgedNEWIDs2,interviewNonRetiredAgedNEWIDs3, interviewNonRetiredAgedNEWIDs4, interviewNonRetiredAgedNEWIDs5)
-
-table(interviewNonRetiredAgedNEWIDs6 %in% interviewNonRetiredAgedNEWIDs7)
-table(interviewNonRetiredAgedNEWIDs7 %in% interviewNonRetiredAgedNEWIDs8)
-table(interviewNonRetiredAgedNEWIDs8 %in% interviewNonRetiredAgedNEWIDs9)
-table(interviewNonRetiredAgedNEWIDs9 %in% interviewNonRetiredAgedNEWIDs10)
-table(interviewNonRetiredAgedNEWIDs10 %in% interviewNonRetiredAgedNEWIDs6)
-
-memiNonRetiredAgedNEWIDs <- c(interviewNonRetiredAgedNEWIDs6,interviewNonRetiredAgedNEWIDs7,interviewNonRetiredAgedNEWIDs8, interviewNonRetiredAgedNEWIDs9, interviewNonRetiredAgedNEWIDs10)
-
-interviewNonRetiredAgedNEWIDs <- unique(c(fmliNonRetiredAgedNEWIDs,memiNonRetiredAgedNEWIDs))
+interviewNonRetiredAgedNEWIDs <- unique(c(interviewNonRetiredAgedNEWIDs1,interviewNonRetiredAgedNEWIDs2,interviewNonRetiredAgedNEWIDs3, interviewNonRetiredAgedNEWIDs4, interviewNonRetiredAgedNEWIDs5,interviewNonRetiredAgedNEWIDs6,interviewNonRetiredAgedNEWIDs7,interviewNonRetiredAgedNEWIDs8, interviewNonRetiredAgedNEWIDs9, interviewNonRetiredAgedNEWIDs10))
 
 fmli141xDoubleRestricted <- fmli141xAgeRestricted[which(fmli141xAgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
 fmli142DoubleRestricted <- fmli142AgeRestricted[which(fmli142AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
@@ -130,71 +99,3 @@ itii142DoubleRestricted <- itii142AgeRestricted[which(itii142AgeRestricted$NEWID
 itii143DoubleRestricted <- itii143AgeRestricted[which(itii143AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
 itii144DoubleRestricted <- itii144AgeRestricted[which(itii144AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
 itii151DoubleRestricted <- itii151AgeRestricted[which(itii151AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
-
-
-##############################################################################################################################################
-# Code for reference person only
-# 
-# #Retirement Restriction
-# #Diary
-# #for both anyone in the CU
-# #WHYNWRK1 - reason why reference person did not work during the past 12 months 1 = Retired
-# #WHYNWRK2 - reason why spouse did not work during the past 12 months 1 = Retired
-# diaryNonRetiredAgedNEWIDs1 <- fmld141AgeRestricted[which(fmld141AgeRestricted$WHYNWRK1 != 1),"NEWID"]
-# diaryNonRetiredAgedNEWIDs2 <- fmld142AgeRestricted[which(fmld142AgeRestricted$WHYNWRK1 != 1),"NEWID"]
-# diaryNonRetiredAgedNEWIDs3 <- fmld143AgeRestricted[which(fmld143AgeRestricted$WHYNWRK1 != 1),"NEWID"]
-# diaryNonRetiredAgedNEWIDs4 <- fmld144AgeRestricted[which(fmld144AgeRestricted$WHYNWRK1 != 1),"NEWID"]
-# diaryNonRetiredAgedNEWIDs5 <- memd141AgeRestricted[which(memd141AgeRestricted$OCCUEARN != 930),"NEWID"]
-# diaryNonRetiredAgedNEWIDs6 <- memd142AgeRestricted[which(memd142AgeRestricted$OCCUEARN != 930),"NEWID"]
-# diaryNonRetiredAgedNEWIDs7 <- memd143AgeRestricted[which(memd143AgeRestricted$OCCUEARN != 930),"NEWID"]
-# diaryNonRetiredAgedNEWIDs8 <- memd144AgeRestricted[which(memd144AgeRestricted$OCCUEARN != 930),"NEWID"]
-# 
-# #proving that all NEWIDs form the same dataframe type are equal
-# table(diaryNonRetiredAgedNEWIDs1 %in% diaryNonRetiredAgedNEWIDs2)
-# table(diaryNonRetiredAgedNEWIDs2 %in% diaryNonRetiredAgedNEWIDs3)
-# table(diaryNonRetiredAgedNEWIDs3 %in% diaryNonRetiredAgedNEWIDs4)
-# table(diaryNonRetiredAgedNEWIDs4 %in% diaryNonRetiredAgedNEWIDs1)
-# 
-# table(diaryNonRetiredAgedNEWIDs5 %in% diaryNonRetiredAgedNEWIDs6)
-# table(diaryNonRetiredAgedNEWIDs6 %in% diaryNonRetiredAgedNEWIDs7)
-# table(diaryNonRetiredAgedNEWIDs7 %in% diaryNonRetiredAgedNEWIDs8)
-# table(diaryNonRetiredAgedNEWIDs8 %in% diaryNonRetiredAgedNEWIDs5)
-# 
-# #checking which NEWIDs to use
-# table(diaryNonRetiredAgedNEWIDs8 %in% diaryNonRetiredAgedNEWIDs1)
-# table(diaryNonRetiredAgedNEWIDs1 %in% diaryNonRetiredAgedNEWIDs8)
-# 
-# #setting the NEWIDs to subset by
-# diaryNonRetiredAgeRestrictedNEWIDs <- diaryNonRetiredAgedNEWIDs8
-# 
-# fmld141DoubleRestricted <- fmld141AgeRestricted[which(fmld141AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# fmld142DoubleRestricted <- fmld142AgeRestricted[which(fmld142AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# fmld143DoubleRestricted <- fmld143AgeRestricted[which(fmld143AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# fmld144DoubleRestricted <- fmld144AgeRestricted[which(fmld144AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# 
-# memd141DoubleRestricted <- memd141AgeRestricted[which(memd141AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# memd142DoubleRestricted <- memd142AgeRestricted[which(memd142AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# memd143DoubleRestricted <- memd143AgeRestricted[which(memd143AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# memd144DoubleRestricted <- memd144AgeRestricted[which(memd144AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# 
-# expd141DoubleRestricted <- expd141AgeRestricted[which(expd141AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # #Below are files that were not applicable to the ageRestricting
-# # expd142DoubleRestricted <- expd142AgeRestricted[which(expd142AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # expd143DoubleRestricted <- expd143AgeRestricted[which(expd143AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # expd144DoubleRestricted <- expd144AgeRestricted[which(expd144AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # #**************************************************************************************************************************
-# 
-# dtbd141DoubleRestricted <- dtbd141AgeRestricted[which(dtbd141AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # #Below are files that were not applicable to the ageRestricting
-# # dtbd142DoubleRestricted <- dtbd142AgeRestricted[which(dtbd142AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # dtbd143DoubleRestricted <- dtbd143AgeRestricted[which(dtbd143AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # dtbd144DoubleRestricted <- dtbd144AgeRestricted[which(dtbd144AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # #**************************************************************************************************************************
-# 
-# dtid141DoubleRestricted <- dtid141AgeRestricted[which(dtid141AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # #Below are files that were not applicable to the ageRestricting
-# # dtid142DoubleRestricted <- dtid142AgeRestricted[which(dtid142AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # dtid143DoubleRestricted <- dtid143AgeRestricted[which(dtid143AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # dtid144DoubleRestricted <- dtid144AgeRestricted[which(dtid144AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
-# # #**************************************************************************************************************************
-
