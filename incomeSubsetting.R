@@ -1,3 +1,5 @@
+rm(list = ls())
+
 #The location of the cloned github repo on your machine
 #ex. "~/Documents/SuperCool/Retirement-Expenses
 directoryOfRepo <- "~/Documents/Retirement-Expenses"
@@ -7,7 +9,7 @@ require(dplyr)
 
 #Removes everything in the environment and re runs the age and retirement restricing process
 #!!!TAKES A LONG TIME DO NOT RUN UNLESS NECESSARY!!!
-source('retirement-AgeRestricting.R', echo=TRUE)
+#source('retirement-AgeRestricting.R', echo=TRUE)
 
 #setting the incomebrackets
 breakpoint1 <- 20000
@@ -22,6 +24,9 @@ breakpoint9 <- 300000
 breakpoint10 <- 750000
 
 ###Diary
+
+#loading dataframes
+load("doubleRestrictedDiaryDataframes.RData")
 
 #potential codes that could be used for income
 uccCodes <- c(900000,900010,900020,900040,900060,980000)
@@ -62,7 +67,8 @@ lines(density(diaryIncomeVector, adjust = 3),lwd=2)
 summary(diaryIncomeVector)
 
 #entire population histogram
-hist(dtbd141$AMOUNT[which(dtbd141$UCC == correctUccCode)],breaks = 100, main = "Income Distribution of Data", xlab = "Annual Income")
+#need to load all the data for this
+# hist(dtbd141$AMOUNT[which(dtbd141$UCC == correctUccCode)],breaks = 100, main = "Income Distribution of Data", xlab = "Annual Income")
 
 #Creating income vectors for brackets
 bracket1IncomeVector <- dtbd141DoubleRestricted[which(dtbd141DoubleRestricted$NEWID %in% diaryBracket1NEWIDs & dtbd141DoubleRestricted$UCC == correctUccCode),"AMOUNT"]
@@ -108,18 +114,13 @@ summary(bracket9IncomeVector)
 hist(bracket10IncomeVector, breaks = 50)
 summary(bracket10IncomeVector)
 
-hist(bracket11IncomeVector, breaks = 50)
-summary(bracket11IncomeVector)
+# hist(bracket11IncomeVector, breaks = 50)
+# summary(bracket11IncomeVector)
 
 ###Interview
 
+#loading the double restricted interview dataframes
+load("doubleRestrictedInterviewDataframes.RData")
+
 #The problem with itii files min < 0
 min(itii141xDoubleRestricted[which(itii141xDoubleRestricted$UCC==980000),"VALUE"])
-
-##creating the incomem column
-#for each NEWID
-for(x in 1:length(unique(itii141xDoubleRestricted$NEWID))){
-  for(y in 1:length(itii141xDoubleRestricted)){
-    
-  }
-}

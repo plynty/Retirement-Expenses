@@ -1,4 +1,4 @@
-#rm(list=ls())
+rm(list=ls())
 
 #The location of the cloned github repo on your machine
 #ex. "~/Documents/SuperCool/Retirement-Expenses
@@ -6,7 +6,9 @@ directoryOfRepo <- "~/Documents/Retirement-Expenses"
 setwd(directoryOfRepo)
 
 #Source only necessary if you are lacking the AgeRestricted dataframes
-source('ageRestricting.R', echo=TRUE)
+#source('ageRestricting.R', echo=TRUE)
+load("ageRestrictedDiaryDataframes.RData")
+
 
 #Retirement Restriction
 #Diary
@@ -56,6 +58,10 @@ dtid141DoubleRestricted <- dtid141AgeRestricted[which(dtid141AgeRestricted$NEWID
 # dtid144DoubleRestricted <- dtid144AgeRestricted[which(dtid144AgeRestricted$NEWID %in% diaryNonRetiredAgeRestrictedNEWIDs),]
 # #**************************************************************************************************************************
 
+### Interview files
+
+#loading in the ageRestricted Data Frames
+load("ageRestrictedInterviewDataframes.RData")
 
 interviewNonRetiredAgedNEWIDs1 <- filter(fmli141xAgeRestricted, INCNONW1 != 1 | INCNONW2 != 1)$NEWID
 interviewNonRetiredAgedNEWIDs2 <- filter(fmli142AgeRestricted, INCNONW1 != 1 | INCNONW2 != 1)$NEWID
@@ -99,3 +105,7 @@ itii142DoubleRestricted <- itii142AgeRestricted[which(itii142AgeRestricted$NEWID
 itii143DoubleRestricted <- itii143AgeRestricted[which(itii143AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
 itii144DoubleRestricted <- itii144AgeRestricted[which(itii144AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
 itii151DoubleRestricted <- itii151AgeRestricted[which(itii151AgeRestricted$NEWID %in% interviewNonRetiredAgedNEWIDs),]
+
+# #Saving Double restricted dataframes as RData files
+# save(fmld141DoubleRestricted,fmld142DoubleRestricted,fmld143DoubleRestricted,fmld144DoubleRestricted,memd141DoubleRestricted,memd142DoubleRestricted,memd143DoubleRestricted,memd144DoubleRestricted,expd141DoubleRestricted,dtbd141DoubleRestricted,dtid141DoubleRestricted, file = "doubleRestrictedDiaryDataframes.RData")
+# save(fmli141xDoubleRestricted,fmli142DoubleRestricted,fmli143DoubleRestricted,fmli144DoubleRestricted,fmli151DoubleRestricted,memi141xDoubleRestricted,memi142DoubleRestricted,memi143DoubleRestricted,memi144DoubleRestricted,memi151DoubleRestricted,mtbi141xDoubleRestricted,mtbi142DoubleRestricted,mtbi143DoubleRestricted,mtbi144DoubleRestricted,mtbi151DoubleRestricted,itbi141xDoubleRestricted,itbi142DoubleRestricted,itbi143DoubleRestricted,itbi144DoubleRestricted,itbi151DoubleRestricted,itii141xDoubleRestricted,itii142DoubleRestricted,itii143DoubleRestricted,itii144DoubleRestricted,itii151DoubleRestricted, file = "doubleRestrictedInterviewDataframes.RData")
