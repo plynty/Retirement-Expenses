@@ -101,5 +101,6 @@ itii144AgeRestricted <- itii144[which(itii144$NEWID %in% interviewAgeRestrictedN
 itii151AgeRestricted <- itii151[which(itii151$NEWID %in% interviewAgeRestrictedNEWIDs),]
 
 # #Creating the RDatafiles for ageRestricted Dataframes
+# #only run these lines if you have changed the age range that you are focusing on
 # save(fmld141AgeRestricted,fmld142AgeRestricted,fmld143AgeRestricted,fmld144AgeRestricted,memd141AgeRestricted,memd142AgeRestricted,memd143AgeRestricted,memd144AgeRestricted,expd141AgeRestricted,dtbd141AgeRestricted,dtid141AgeRestricted, file = "ageRestrictedDiaryDataframes.RData")
 # save(fmli141xAgeRestricted,fmli142AgeRestricted,fmli143AgeRestricted,fmli144AgeRestricted,fmli151AgeRestricted,memi141xAgeRestricted,memi142AgeRestricted,memi143AgeRestricted,memi144AgeRestricted,memi151AgeRestricted,mtbi141xAgeRestricted,mtbi142AgeRestricted,mtbi143AgeRestricted,mtbi144AgeRestricted,mtbi151AgeRestricted,itbi141xAgeRestricted,itbi142AgeRestricted,itbi143AgeRestricted,itbi144AgeRestricted,itbi151AgeRestricted,itii141xAgeRestricted,itii142AgeRestricted,itii143AgeRestricted,itii144AgeRestricted,itii151AgeRestricted, file = "ageRestrictedInterviewDataframes.RData")

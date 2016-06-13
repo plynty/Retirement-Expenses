@@ -8,7 +8,7 @@ setwd(directoryOfRepo)
 require(dplyr)
 
 #Removes everything in the environment and re runs the age and retirement restricing process
-#!!!TAKES A LONG TIME DO NOT RUN UNLESS NECESSARY!!!
+#!!!TAKES A LONG TIME DO NOT RUN UNLESS YOU WANT/NEED ALL THE PREVIOUS DATAFRAMES!!!
 #source('retirement-AgeRestricting.R', echo=TRUE)
 
 #setting the incomebrackets
