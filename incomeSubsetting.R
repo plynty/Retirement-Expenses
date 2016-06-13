@@ -3,6 +3,8 @@
 directoryOfRepo <- "~/Documents/Retirement-Expenses"
 setwd(directoryOfRepo)
 
+require(dplyr)
+
 #Removes everything in the environment and re runs the age and retirement restricing process
 #!!!TAKES A LONG TIME DO NOT RUN UNLESS NECESSARY!!!
 source('retirement-AgeRestricting.R', echo=TRUE)

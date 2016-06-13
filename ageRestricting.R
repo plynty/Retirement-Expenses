@@ -45,7 +45,7 @@ fmld143AgeRestricted <- filter(fmld143,AGE_REF >= minAge & AGE_REF <= maxAge)
 fmld144AgeRestricted <- filter(fmld144,AGE_REF >= minAge & AGE_REF <= maxAge)
 
 #creating vector of new ids of which to use for other dataframes
-diaryAgeRestrictedNEWIDs <- unique(fmld141AgeRestricted$NEWID,fmld142AgeRestricted$NEWID,fmld143AgeRestricted$NEWID,fmld144AgeRestricted$NEWID,memd141AgeRestricted$NEWID,memd142AgeRestricted$NEWID,memd143AgeRestricted$NEWID,memd144AgeRestricted)
+diaryAgeRestrictedNEWIDs <- unique(c(fmld141AgeRestricted$NEWID,fmld142AgeRestricted$NEWID,fmld143AgeRestricted$NEWID,fmld144AgeRestricted$NEWID,memd141AgeRestricted$NEWID,memd142AgeRestricted$NEWID,memd143AgeRestricted$NEWID,memd144AgeRestricted$NEWID))
 
 #loading in the last three types of diary survey data files
 expd141 <- read.csv("diary14/expd141.csv", stringsAsFactors=FALSE)
@@ -69,6 +69,7 @@ expd141AgeRestricted <- expd141[which(expd141$NEWID %in% diaryAgeRestrictedNEWID
 # expd142AgeRestricted <- expd142[which(expd142$NEWID %in% diaryAgeRestrictedNEWIDs),]
 # expd143AgeRestricted <- expd143[which(expd143$NEWID %in% diaryAgeRestrictedNEWIDs),]
 # expd144AgeRestricted <- expd144[which(expd144$NEWID %in% diaryAgeRestrictedNEWIDs),]
+# rm(expd142AgeRestricted,expd143AgeRestricted,expd144AgeRestricted)
 # #*********************************************************************************
 
 dtbd141AgeRestricted <- dtbd141[which(dtbd141$NEWID %in% diaryAgeRestrictedNEWIDs),]
@@ -76,6 +77,7 @@ dtbd141AgeRestricted <- dtbd141[which(dtbd141$NEWID %in% diaryAgeRestrictedNEWID
 # dtbd142AgeRestricted <- dtbd142[which(dtbd142$NEWID %in% diaryAgeRestrictedNEWIDs),]
 # dtbd143AgeRestricted <- dtbd143[which(dtbd143$NEWID %in% diaryAgeRestrictedNEWIDs),]
 # dtbd144AgeRestricted <- dtbd144[which(dtbd144$NEWID %in% diaryAgeRestrictedNEWIDs),]
+# rm(dtbd142AgeRestricted,dtbd143AgeRestricted,dtbd144AgeRestricted)
 # #*********************************************************************************
 
 dtid141AgeRestricted <- dtid141[which(dtid141$NEWID %in% diaryAgeRestrictedNEWIDs),]
@@ -83,6 +85,7 @@ dtid141AgeRestricted <- dtid141[which(dtid141$NEWID %in% diaryAgeRestrictedNEWID
 # dtid142AgeRestricted <- dtid142[which(dtid142$NEWID %in% diaryAgeRestrictedNEWIDs),]
 # dtid143AgeRestricted <- dtid143[which(dtid143$NEWID %in% diaryAgeRestrictedNEWIDs),]
 # dtid144AgeRestricted <- dtid144[which(dtid144$NEWID %in% diaryAgeRestrictedNEWIDs),]
+# rm(dtid142AgeRestricted,dtid143AgeRestricted,dtid144AgeRestricted)
 # #*********************************************************************************
 
 ###Interview Files with Fixed Age
@@ -111,13 +114,6 @@ memi142AgeRestricted <- filter(memi142,AGE >= minAge & AGE <= maxAge)
 memi143AgeRestricted <- filter(memi143,AGE >= minAge & AGE <= maxAge)
 memi144AgeRestricted <- filter(memi144,AGE >= minAge & AGE <= maxAge)
 memi151AgeRestricted <- filter(memi151,AGE >= minAge & AGE <= maxAge)
-
-#testing to see if there are any of the same NEWIDs in different files
-table(memi141xAgeRestricted$NEWID %in% memi142AgeRestricted$NEWID)
-table(memi142AgeRestricted$NEWID %in% memi143AgeRestricted$NEWID)
-table(memi143AgeRestricted$NEWID %in% memi144AgeRestricted$NEWID)
-table(memi144AgeRestricted$NEWID %in% memi151AgeRestricted$NEWID)
-table(memi151AgeRestricted$NEWID %in% memi141xAgeRestricted$NEWID)
 
 #creating a vector of new ids to use to filter the rest of the interview dataframes
 interviewAgeRestrictedNEWIDs <- unique(c(fmli141xAgeRestricted$NEWID,fmli142AgeRestricted$NEWID,fmli143AgeRestricted$NEWID,fmli144AgeRestricted$NEWID,fmli151AgeRestricted$NEWID,memi141xAgeRestricted$NEWID,memi142AgeRestricted$NEWID,memi143AgeRestricted$NEWID,memi144AgeRestricted$NEWID,memi151AgeRestricted$NEWID))
