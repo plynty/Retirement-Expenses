@@ -1,4 +1,11 @@
 rm(list=ls())
+
+if(!("stringr" %in% rownames(installed.packages()))){
+  # install it if not yet installed
+  install.packages(pkg)
+} 
+library(stringr) 	# load stringr package (manipulates character strings easily)
+
 # Assign a variable for the year for which data will be tabulated
 year <- 2014
 
@@ -133,6 +140,21 @@ for(x in 1:nrow(aggfmt1)){
 
 aggfmt1$title <- stubfile$title
 
+#creating a reference list to find the title of category abbreviations
+abbreviations <- vector()
+titles <- vector()
+
+for(x in 1:nrow(aggfmt1)){
+  if(is.na( as.numeric(as.character( aggfmt1$UCC[x])))){
+    abbreviations <- c(abbreviations,as.character(aggfmt1$UCC[x]))
+    titles <- c(titles,as.character(aggfmt1$title[x]))
+  }
+}
+abbreviationMap <- as.list(titles)
+names(abbreviationMap) <- abbreviations
+
+#to find out the heading abbreviation just enter abbreviationMap$ABBREV. where ABBREV is the abbrevation you wish to look up
+str_trim(abbreviationMap$CONSUN)
 
 # remove records where the UCC is not numeric
 aggfmt1 <- subset( aggfmt1 , !is.na( as.numeric( as.character( UCC ) ) ) )
