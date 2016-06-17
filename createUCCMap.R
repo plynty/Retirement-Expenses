@@ -1,4 +1,4 @@
-rm(list=ls())
+#rm(list=ls())
 
 if(!("stringr" %in% rownames(installed.packages()))){
   # install it if not yet installed
@@ -72,7 +72,7 @@ stubfile$line <- paste0( stubfile$count , stubfile$level )
 curlines <- rep( "" , 10 )
 
 # initiate a matrix containing the line numbers of each expenditure category
-aggfmt1 <- matrix( nrow = nrow( stubfile ) , ncol = 10 )
+abbrevDF <- matrix( nrow = nrow( stubfile ) , ncol = 10 )
 
 # loop through each record in the stubfile..
 for ( i in seq( nrow( stubfile ) ) ){
@@ -101,68 +101,68 @@ for ( i in seq( nrow( stubfile ) ) ){
   savelines[ curlevel ] <- ""
   
   # overwrite the entire row with the character vector of length ten
-  aggfmt1[ i , ] <- savelines
+  abbrevDF[ i , ] <- savelines
 }
 
 # convert the matrix to a data frame..
-aggfmt1 <- data.frame( aggfmt1 )
+abbrevDF <- data.frame( abbrevDF )
 
 # ..and name its columns line1 - line10
-names( aggfmt1 ) <- c(paste0( "heading" , 1:9 ), "Ref_Line")
+names( abbrevDF ) <- c(paste0( "heading" , 1:9 ), "Ref_Line")
 
 
 # tack on the UCC and line columns from the stubfile (which has the same number of records)
-aggfmt1 <- cbind( aggfmt1 , stubfile[ , c( "UCC" , "line" ) ] )
+abbrevDF <- cbind( abbrevDF , stubfile[ , c( "UCC" , "line" ) ] )
 
 # mapping the line number to the heading
-lines <- aggfmt1$line[which(is.na( as.numeric( as.character( aggfmt1$UCC ) ) ))]
-headings <- as.character(aggfmt1$UCC[which(is.na( as.numeric( as.character( aggfmt1$UCC ) ) ))])
+lines <- abbrevDF$line[which(is.na( as.numeric( as.character( abbrevDF$UCC ) ) ))]
+headings <- as.character(abbrevDF$UCC[which(is.na( as.numeric( as.character( abbrevDF$UCC ) ) ))])
 
-aggfmt1$heading1 <- as.character(aggfmt1$heading1)
-aggfmt1$heading2 <- as.character(aggfmt1$heading2)
-aggfmt1$heading3 <- as.character(aggfmt1$heading3)
-aggfmt1$heading4 <- as.character(aggfmt1$heading4)
-aggfmt1$heading5 <- as.character(aggfmt1$heading5)
-aggfmt1$heading6 <- as.character(aggfmt1$heading6)
-aggfmt1$heading7 <- as.character(aggfmt1$heading7)
-aggfmt1$heading8 <- as.character(aggfmt1$heading8)
-aggfmt1$heading9 <- as.character(aggfmt1$heading9)
+abbrevDF$heading1 <- as.character(abbrevDF$heading1)
+abbrevDF$heading2 <- as.character(abbrevDF$heading2)
+abbrevDF$heading3 <- as.character(abbrevDF$heading3)
+abbrevDF$heading4 <- as.character(abbrevDF$heading4)
+abbrevDF$heading5 <- as.character(abbrevDF$heading5)
+abbrevDF$heading6 <- as.character(abbrevDF$heading6)
+abbrevDF$heading7 <- as.character(abbrevDF$heading7)
+abbrevDF$heading8 <- as.character(abbrevDF$heading8)
+abbrevDF$heading9 <- as.character(abbrevDF$heading9)
 
-for(x in 1:nrow(aggfmt1)){
+for(x in 1:nrow(abbrevDF)){
   for(y in 1:9){
-    if(aggfmt1[x,y] == ""){
+    if(abbrevDF[x,y] == ""){
       break
     }else{
-      aggfmt1[x,y] <- headings[which(lines == aggfmt1[x,y])]
+      abbrevDF[x,y] <- headings[which(lines == abbrevDF[x,y])]
     }
   }
 }
 
-aggfmt1$title <- stubfile$title
+abbrevDF$title <- stubfile$title
 
 #creating a reference list to find the title of category abbreviations
 abbreviations <- vector()
 titles <- vector()
 
-for(x in 1:nrow(aggfmt1)){
-  if(is.na( as.numeric(as.character( aggfmt1$UCC[x])))){
-    abbreviations <- c(abbreviations,as.character(aggfmt1$UCC[x]))
-    titles <- c(titles,as.character(aggfmt1$title[x]))
+for(x in 1:nrow(abbrevDF)){
+  if(is.na( as.numeric(as.character( abbrevDF$UCC[x])))){
+    abbreviations <- c(abbreviations,as.character(abbrevDF$UCC[x]))
+    titles <- c(titles,str_trim(as.character(abbrevDF$title[x])))
   }
 }
 abbreviationMap <- as.list(titles)
 names(abbreviationMap) <- abbreviations
 
 #to find out the heading abbreviation just enter abbreviationMap$ABBREV. where ABBREV is the abbrevation you wish to look up
-str_trim(abbreviationMap$CONSUN)
+abbreviationMap$INCBFT
 
 # remove records where the UCC is not numeric
-aggfmt1 <- subset( aggfmt1 , !is.na( as.numeric( as.character( UCC ) ) ) )
+abbrevDF <- subset( abbrevDF , !is.na( as.numeric( as.character( UCC ) ) ) )
 
 # reset the row names/numbers
-rownames( aggfmt1 ) <- NULL
+rownames( abbrevDF ) <- NULL
 
-aggfmt1$Ref_Line <- NULL
+abbrevDF$Ref_Line <- NULL
 
 # # order the data frame by UCC
 # aggfmt1 <- aggfmt1[ order( aggfmt1$UCC ) , ]
