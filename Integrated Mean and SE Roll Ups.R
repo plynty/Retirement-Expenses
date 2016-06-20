@@ -1,10 +1,10 @@
 # Assign a variable for the root directory
 # The same directory that was used in the Integrated Mean and SE.R file
-mydir <- "/Users/aarondyke/CE_PUMD"
+mydir <- "/Users/aarondyke/Documents/Retirement-Expenses"
 yr <- 2014
 
 # Assuming you have setup the Integrated Mean and SE.R file with the parameters you want
- source(paste0(mydir,'/',yr,'/Integrated Mean and SE.R'), echo=TRUE)
+#source(paste0(mydir,"/Integrated Mean and SE.R"), echo=TRUE)
 
 # Remove white space from title columns in both tab.out and stubfile
 tab.out$title <- str_trim(as.character(tab.out$title))

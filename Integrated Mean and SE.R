@@ -30,34 +30,18 @@ year <- 2014
 # Assign a variable for the root directory
 mydir <- "/Users/aarondyke/Documents/Retirement-Expenses"
 
-# Create the root directory if it doesn't exist
-try(dir.create(mydir, showWarnings=FALSE))
-
 #create new income brackets
-incomeBreakpoints <- c(-Inf,0,5000,10000,15000,20000,30000,40000,50000,70000,100000,175000)
+incomeBreakpoints <- c(-Inf,0,5000,10000,15000,20000,30000,40000,50000,70000)
 
 # Create age range
 maxAge <- 64
 minAge <- 55
 
 # Create boolean that says to exclude retired CUs or not
-excludeRetired <- TRUE
+excludeRetired <- FALSE
 
-# creating a function that will return an Income class vector based on a vector of income braket breakpoints
-# income class 0 is individuals making less than 0 dollars
-getINCLASSvector <- function(incomes,breakpoints){
-  breakpoints <- sort(breakpoints)
-  inClasses <- vector()
-  for(i in 1:length(incomes)){
-    for(x in length(breakpoints):1){
-      if(incomes[i]>=breakpoints[x]){
-        inClasses <- c(inClasses,x-1)
-        break
-      }
-    }
-  }
-  return(inClasses)
-}
+# Create boolean that determines if the R script will create a csv of the tab.out dataframe 
+createTabOutCSV <- FALSE
 
 ###############################################################################
 # Note: The below code converts required files from ".csv" to ".Rda". Comment #
@@ -201,7 +185,24 @@ read.in.qs <-
 	# return the four or five combined data frames
 	# as a single, stacked data frame
 	x
+	}
+
+# creating a function that will return an Income class vector based on a vector of income braket breakpoints
+# income class 0 is individuals making less than 0 dollars
+getINCLASSvector <- function(incomes,breakpoints){
+  breakpoints <- sort(breakpoints)
+  inClasses <- vector()
+  for(i in 1:length(incomes)){
+    for(x in length(breakpoints):1){
+      if(incomes[i]>=breakpoints[x]){
+        inClasses <- c(inClasses,x-1)
+        break
+      }
+    }
+  }
+  return(inClasses)
 }
+
 
 
 # alter the current working directory to include the current analysis year
@@ -882,10 +883,12 @@ tab.out[1, 3:ncol(tab.out)] <- tab.out[1, 3:ncol(tab.out)]/1000
 # round all numeric columns to two decimal places
 tab.out[,3:ncol(tab.out)] <- round(tab.out[,3:ncol(tab.out)], 2)
 
-# ..and save to a comma separated value file on the local disk
-if(excludeRetired){
-  write.csv( tab.out , paste0(year, " Integrated Mean And SE Aged ", minAge,"-",maxAge," Non-Retired.csv") , row.names = FALSE )
-}else{
-  write.csv( tab.out , paste0(year, " Integrated Mean And SE Aged ", minAge,"-",maxAge,".csv") , row.names = FALSE )
+if(createTabOutCSV){
+  # ..and save to a comma separated value file on the local disk
+  if(excludeRetired){
+    write.csv( tab.out , paste0(year, " Integrated Mean And SE Aged ", minAge,"-",maxAge," Non-Retired.csv") , row.names = FALSE )
+  }else{
+    write.csv( tab.out , paste0(year, " Integrated Mean And SE Aged ", minAge,"-",maxAge,".csv") , row.names = FALSE )
+  }
 }
 
