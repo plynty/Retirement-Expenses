@@ -4,7 +4,7 @@ mydir <- "/Users/aarondyke/CE_PUMD"
 yr <- 2014
 
 # Assuming you have setup the Integrated Mean and SE.R file with the parameters you want
-#source(paste0(mydir,'/',yr,'/Integrated Mean and SE.R'), echo=TRUE)
+# source(paste0(mydir,'/',yr,'/Integrated Mean and SE.R'), echo=TRUE)
 
 # Remove white space from title columns in both tab.out and stubfile
 tab.out$title <- str_trim(as.character(tab.out$title))
@@ -13,6 +13,7 @@ stubfile$title <- str_trim(as.character(stubfile$title))
 # Merging tabout with the stubfile to get the UCC abbreviations
 test <- merge(tab.out,stubfile, by = "title")
 test <- subset(test, select=-c(survey,count,line,type))
+test$UCC<- str_trim(test$UCC)
 
 # Creating roll up categories
 foodAtHome <- c("FOODHO")
@@ -32,19 +33,52 @@ education <- c("EDUCAT")
 tobacco <- c("TOBACC")
 
 breakUps <- list(foodAtHome,foodAway,alcoholicDrinks,housing,utilities,apparelAndServices,transportation,healthCare,entertainment,personalCare,miscellaneous,charitableAndFamilyGiving,insurance,education,tobacco)
+names(breakUps) <- c("foodAtHome","foodAway","alcoholicDrinks","housing","utilities","apparelAndServices","transportation","healthCare","entertainment","personalCare","miscellaneous","charitableAndFamilyGiving","insurance","education","tobacco")
+
+rollUpDF <- as.data.frame(matrix(rep(0, 7 + length(incomeLabels)), nrow=1))
+names(rollUpDF) <- colnames(test)
 
 # loops through the list to get the rows that have the right accronyms
 for(x in 1:length(breakUps)){
   for(y in 1:length(breakUps[[x]])){
-    test[which(test$UCC == breakUps[[x]][y]),]
+    rollUpDF <- rbind(rollUpDF,test[which(test$UCC == breakUps[[x]][y]),])
   }
 }
+dropColumns <- c("estimate","level","group")
+rollUpDF <- rollUpDF[-c(1,which(rollUpDF$estimate == "SE")),!(names(rollUpDF)%in%dropColumns)]
+rownames(rollUpDF)<-NULL
 
-#check the abreviation title
-abbreviationMap$FOODHO
+# creating names for plynty dataframe
+plyntyDFNamesString <- "category, less than $0, Income bracket 0 percentage"
+for(x in 1:length(incomeLabels)){
+  plyntyDFNamesString <- paste0(plyntyDFNamesString,", ",incomeLabels[x],", Income bracket ",x," percentage")
+}
 
-columnNames <- colnames(tab.out[,2:ncol(tab.out)])
+plyntyDFNamesVector <-str_split(plyntyDFNamesString,", ")
+plyntyDF <- as.data.frame(matrix(rep(0, (3 + 2*length(incomeLabels)) * (length(breakUps)+1)), nrow=length(breakUps)+1))
+colnames(plyntyDF) <- plyntyDFNamesVector[[1]]
+plyntyDF[,1] <- c("total",names(breakUps))
 
+#filling the dataframe $ excluding totals
+for(x in 1:length(breakUps)){
+  plyntyDF[which(plyntyDF$category == names(breakUps)[x]),seq(2,ncol(plyntyDF),2)]<-colSums((rollUpDF[which(rollUpDF$UCC %in% breakUps[[x]]),2:(ncol(rollUpDF)-1)]))
+}
 
+# filling in the totals
+for(x in seq(2,ncol(plyntyDF),2)){
+  total <- 0
+  for(y in 2:nrow(plyntyDF)){
+    total <- total + plyntyDF[y,x]
+  }
+  plyntyDF[1,x] <- total
+}
+
+# calculating the percentages
+for(y in seq(3,ncol(plyntyDF),2)){
+  totalExpnd <- plyntyDF[1,y-1]
+  for(x in 1:nrow(plyntyDF)){
+    plyntyDF[x,y]<-round(plyntyDF[x,y-1]/totalExpnd, digits = 3)
+  }
+}
 
 

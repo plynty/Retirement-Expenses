@@ -23,7 +23,7 @@
 ###############################################################################
 ###############################################################################
 
-
+### Parameters to fill out before running the R script
 # Assign a variable for the year for which data will be tabulated
 year <- 2014
 
@@ -34,14 +34,14 @@ mydir <- "/Users/aarondyke/CE_PUMD"
 try(dir.create(mydir, showWarnings=FALSE))
 
 #create new income brackets
-incomeBreakpoints <- c(-Inf,0,5000,10000,15000,20000,30000,40000,50000,70000,100000)
+incomeBreakpoints <- c(-Inf,0,5000,10000,15000,20000,30000,40000,50000,70000,100000,175000)
 
 # Create age range
 maxAge <- 64
 minAge <- 55
 
 # Create boolean that says to exclude retired CUs or not
-excludeRetired <- FALSE
+excludeRetired <- TRUE
 
 # creating a function that will return an Income class vector based on a vector of income braket breakpoints
 # income class 0 is individuals making less than 0 dollars
@@ -140,6 +140,8 @@ library(plyr); library(dplyr)     # load plyr package (manipulates databases eas
 
 # create vector of ages between the max and min age
 ageRange <- seq(minAge,maxAge)
+
+incomeBreakpoints <- sort(incomeBreakpoints)
 
 # pull the last two digits of the year variable into a separate string
 yr <- substr( year , 3 , 4 )
@@ -439,7 +441,7 @@ rm(
 f$INCLASS <- getINCLASSvector(f$FINCBTXM,incomeBreakpoints)
 
 # create age restriction
-f <- f[which(f$AGE_REF %in% ageRange),]
+f <- f[which(f$AGE_REF %in% minAge:maxAge),]
 
 if(excludeRetired){
   f <- f[which(f$INCNONW1 != 1),]
@@ -857,7 +859,7 @@ tab.out <- tab.out[ , c( "title" , "estimate" , "INCLASS99" , paste0( "INCLASS" 
 incomeLabels <- vector()
 for(i in 2:length(incomeBreakpoints)){
   if(i+1 <= length(incomeBreakpoints)){
-  incomeLabels <- c(incomeLabels, paste0("$",incomeBreakpoints[i]," to $",incomeBreakpoints[i+1]))
+    incomeLabels <- c(incomeLabels, paste0("$",incomeBreakpoints[i]," to $",incomeBreakpoints[i+1]))
   }else{
     incomeLabels <- c(incomeLabels, paste0("$",incomeBreakpoints[i]," and over"))
   }
@@ -871,11 +873,11 @@ names( tab.out )[ 3:ncol(tab.out) ] <-
 		incomeLabels
 	)
 
-# represent the number of consumer units in thousands
-tab.out[1, 3:ncol(tab.out)] <- tab.out[1, 3:ncol(tab.out)]/1000
-
 # remove the first row which tabulates the mean # number of households
 tab.out <- tab.out[-1,]
+
+# represent the number of consumer units in thousands
+tab.out[1, 3:ncol(tab.out)] <- tab.out[1, 3:ncol(tab.out)]/1000
 
 # round all numeric columns to two decimal places
 tab.out[,3:ncol(tab.out)] <- round(tab.out[,3:ncol(tab.out)], 2)
