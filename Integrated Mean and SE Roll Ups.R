@@ -49,15 +49,15 @@ rollUpDF <- rollUpDF[-c(1,which(rollUpDF$estimate == "SE")),!(names(rollUpDF)%in
 rownames(rollUpDF)<-NULL
 
 # creating names for plynty dataframe
-plyntyDFNamesString <- "category, less than $0, Income bracket 0 percentage"
+plyntyDFNamesString <- "category, all consumer units, all consumer units percentages, less than $0, Income bracket 0 percentages"
 for(x in 1:length(incomeLabels)){
-  plyntyDFNamesString <- paste0(plyntyDFNamesString,", ",incomeLabels[x],", Income bracket ",x," percentage")
+  plyntyDFNamesString <- paste0(plyntyDFNamesString,", ",incomeLabels[x],", Income bracket ",x," percentages")
 }
 
 plyntyDFNamesVector <-str_split(plyntyDFNamesString,", ")
-plyntyDF <- as.data.frame(matrix(rep(0, (3 + 2*length(incomeLabels)) * (length(breakUps)+1)), nrow=length(breakUps)+1))
+plyntyDF <- as.data.frame(matrix(rep(0, (5 + 2*length(incomeLabels)) * (length(breakUps)+1)), nrow=length(breakUps)+1))
 colnames(plyntyDF) <- plyntyDFNamesVector[[1]]
-plyntyDF[,1] <- c("total",names(breakUps))
+plyntyDF[,1] <- c("total expenditures",names(breakUps))
 
 #filling the dataframe $ excluding totals
 for(x in 1:length(breakUps)){
