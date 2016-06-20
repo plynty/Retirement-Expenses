@@ -1,5 +1,3 @@
-#rm(list=ls())
-
 if(!("stringr" %in% rownames(installed.packages()))){
   # install it if not yet installed
   install.packages(pkg)
@@ -163,23 +161,3 @@ abbrevDF <- subset( abbrevDF , !is.na( as.numeric( as.character( UCC ) ) ) )
 rownames( abbrevDF ) <- NULL
 
 abbrevDF$Ref_Line <- NULL
-
-# # order the data frame by UCC
-# aggfmt1 <- aggfmt1[ order( aggfmt1$UCC ) , ]
-# 
-# # rename line to compare
-# aggfmt1$compare <- aggfmt1$line
-# aggfmt1$line <- NULL
-# 
-# # reset the row names/numbers
-# rownames( aggfmt1 ) <- NULL
-# 
-# # transpose the data, holding UCC and compare
-# aggfmt2 <- melt(aggfmt1, id=c("UCC","compare")) 
-# names( aggfmt2 )[ 4 ] <- "line"
-# 
-# # retain the UCC-to-line crosswalk wherever the 'line' variable is not blank
-# aggfmt <- subset( aggfmt2 , line != "" , select = c( "UCC" , "line" ) )
-# 
-# # re-order the data frame by UCC
-# aggfmt <- aggfmt[ order( aggfmt$UCC ) , ]

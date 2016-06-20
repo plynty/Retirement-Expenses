@@ -4,7 +4,7 @@ mydir <- "/Users/aarondyke/CE_PUMD"
 yr <- 2014
 
 # Assuming you have setup the Integrated Mean and SE.R file with the parameters you want
-# source(paste0(mydir,'/',yr,'/Integrated Mean and SE.R'), echo=TRUE)
+ source(paste0(mydir,'/',yr,'/Integrated Mean and SE.R'), echo=TRUE)
 
 # Remove white space from title columns in both tab.out and stubfile
 tab.out$title <- str_trim(as.character(tab.out$title))
