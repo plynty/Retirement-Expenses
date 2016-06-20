@@ -1,0 +1,771 @@
+*  *  Diary stub parameter file                                      HEADDIR      H  1  CUCHARS             
+1  1  Number of consumer units (in thousands)                        CONSUNIT     S  1  CUCHARS             
+*  *  Number of sample diaries                                       SAMPDIAR     S  1  CUCHARS             
+*  *  Lower limit                                                    QUINTLIM     S  1  CUCHARS             
+*  *  Consumer unit characteristics:                                 TITLECU      T  1  CUCHARS             
+1  1    Income before taxes                                          INCBFTAX     D  1  CUCHARS             
+1  3      Meals as pay                                               800700       D  1  CUCHARS             
+1  3      Rent as pay                                                800710       D  1  CUCHARS             
+1  3      Income before taxes                                        980000       D  1  CUCHARS             
+1  1    Age of reference person                                      980020       D  1  CUCHARS             
+*  *    Average number in consumer unit:                             TITLEACU     T  1  CUCHARS             
+1  1      People                                                     980010       D  1  CUCHARS             
+1  1      Children under 18                                          980050       D  1  CUCHARS             
+1  1      Adults 65 and older                                        980060       D  1  CUCHARS             
+1  1      Earners                                                    980030       D  1  CUCHARS             
+1  1      Vehicles (owned)                                           980040       D  1  CUCHARS             
+*  *  Percent distribution:                                          TITLEPD      T  1  CUCHARS             
+*  *    Reference person:                                            TITLESRP     T  1  CUCHARS             
+1  1      Men                                                        980210       D  1  CUCHARS             
+1  1      Women                                                      980220       D  1  CUCHARS             
+*  *    Housing tenure:                                              TITLEHT      T  1  CUCHARS             
+1  1      Homeowner                                                  HOMEOWN      G  1  CUCHARS             
+1  4        With mortgage                                            980230       D  1  CUCHARS             
+1  4        Without mortgage                                         980240       D  1  CUCHARS             
+1  4        Mortgage not reported                                    980250       D  1  CUCHARS             
+1  1      Renter                                                     980260       D  1  CUCHARS             
+*  *    Race of reference person:                                    TITLERRP     T  1  CUCHARS             
+1  1      Black or African-American                                  980270       D  1  CUCHARS             
+1  1      White, Asian, and all other races                          WHTNDOTH     G  1  CUCHARS             
+1  4        White                                                    980281       D  1  CUCHARS             
+1  4        Asian                                                    980282       D  1  CUCHARS             
+1  4        All other races                                          980283       D  1  CUCHARS             
+*  *    Hispanic or Latino origin of reference person:               TITLEHOP     T  1  CUCHARS             
+1  1      Hispanic or Latino                                         980285       D  1  CUCHARS             
+1  1      Not Hispanic or Latino                                     980286       D  1  CUCHARS             
+*  *    Education of reference person:                               TITLEEDU     T  1  CUCHARS             
+1  1      Elementary (1-8)                                           980290       D  1  CUCHARS             
+1  1      High school (9-12)                                         980300       D  1  CUCHARS             
+1  1      College                                                    980310       D  1  CUCHARS             
+1  1      Never attended and other                                   980320       D  1  CUCHARS             
+1  1    At least one vehicle owned                                   980330       D  1  CUCHARS             
+1  1  Average weekly expenditures:                                   TITLEAWE     G  1  EXPEND              
+1  2    Food                                                         FOODTOTL     G  1  EXPEND              
+1  3      Food at home                                               FOODHOME     G  1  FOOD                
+1  4        Cereals and bakery products                              CERBAKRY     G  1  FOOD                
+1  5          Cereals and cereal products                            CEREAL       G  1  FOOD                
+1  6            Flour                                                010110       D  1  FOOD                
+1  6            Prepared flour mixes                                 010120       D  1  FOOD                
+1  6            Ready-to-eat and cooked cereals                      010210       D  1  FOOD                
+1  6            Rice                                                 010310       D  1  FOOD                
+1  6            Pasta, cornmeal and other cereal products            010320       D  1  FOOD                
+1  5          Bakery products                                        BAKERY       G  1  FOOD                
+1  6            Bread                                                BREAD        G  1  FOOD                
+1  7              White bread                                        020110       D  1  FOOD                
+1  7              Bread, other than white                            020210       D  1  FOOD                
+1  6            Cookies and crackers                                 CRAKCOOK     G  1  FOOD                
+1  7              Cookies                                            020510       D  1  FOOD                
+1  7              Crackers                                           020610       D  1  FOOD                
+1  6            Frozen and refrigerated bakery products              020810       D  1  FOOD                
+1  6            Other bakery products                                OTHBAKRY     G  1  FOOD                
+1  7              Biscuits and rolls                                 020310       D  1  FOOD                
+1  7              Cakes and cupcakes                                 020410       D  1  FOOD                
+1  7              Bread and cracker products                         020620       D  1  FOOD                
+1  7              Sweetrolls, coffee cakes, doughnuts                020710       D  1  FOOD                
+1  7              Pies, tarts, turnovers                             020820       D  1  FOOD                
+1  4        Meats, poultry, fish, and eggs                           ANIMAL       G  1  FOOD                
+1  5          Beef                                                   BEEF         G  1  FOOD                
+1  6            Ground beef                                          030110       D  1  FOOD                
+1  6            Roast                                                ROAST        G  1  FOOD                
+1  7              Chuck roast                                        030210       D  1  FOOD                
+1  7              Round roast                                        030310       D  1  FOOD                
+1  7              Other roast                                        030410       D  1  FOOD                
+1  6            Steak                                                STEAK        G  1  FOOD                
+1  7              Round steak                                        030510       D  1  FOOD                
+1  7              Sirloin steak                                      030610       D  1  FOOD                
+1  7              Other steak                                        030710       D  1  FOOD                
+1  6            Other beef                                           030810       D  1  FOOD                
+1  5          Pork                                                   PORK         G  1  FOOD                
+1  6            Bacon                                                040110       D  1  FOOD                
+1  6            Pork chops                                           040210       D  1  FOOD                
+1  6            Ham                                                  HAM          G  1  FOOD                
+1  7              Ham, not canned                                    040310       D  1  FOOD                
+1  7              Canned ham                                         040610       D  1  FOOD                
+1  6            Sausage                                              040510       D  1  FOOD                
+1  6            Other pork                                           040410       D  1  FOOD                
+1  5          Other meats                                            OTHRMEAT     G  1  FOOD                
+1  6            Frankfurters                                         050110       D  1  FOOD                
+1  6            Lunch meats (cold cuts)                              LNCHMEAT     G  1  FOOD                
+1  7              Bologna, liverwurst, salami                        050210       D  1  FOOD                
+1  7              Other lunchmeats                                   050310       D  1  FOOD                
+1  6            Lamb, organ meats and others                         LAMBOTHR     G  1  FOOD                
+1  7              Lamb and organ meats                               050410       D  1  FOOD                
+1  7              Mutton, goat and game                              050900       D  1  FOOD                
+1  5          Poultry                                                POULTRY      G  1  FOOD                
+1  6            Fresh and frozen chickens                            CHICKEN      G  1  FOOD                
+1  7              Fresh and frozen whole chicken                     060110       D  1  FOOD                
+1  7              Fresh and frozen chicken parts                     060210       D  1  FOOD                
+1  6            Other poultry                                        060310       D  1  FOOD                
+1  5          Fish and seafood                                       FISHSEA      G  1  FOOD                
+1  6            Canned fish and seafood                              070110       D  1  FOOD                
+1  6            Fresh fish and shellfish                             070230       D  1  FOOD                
+1  6            Frozen fish and shellfish                            070240       D  1  FOOD                
+1  5          Eggs                                                   080110       D  1  FOOD                
+1  4        Dairy products                                           DAIRY        G  1  FOOD                
+1  5          Fresh milk and cream                                   MILKCRM      G  1  FOOD                
+1  6            Fresh milk, all types                                090110       D  1  FOOD                
+1  6            Cream                                                090210       D  1  FOOD                
+1  5          Other dairy products                                   OTHDAIRY     G  1  FOOD                
+1  6            Butter                                               100110       D  1  FOOD                
+1  6            Cheese                                               100210       D  1  FOOD                
+1  6            Ice cream and related products                       100410       D  1  FOOD                
+1  6            Miscellaneous dairy products                         100510       D  1  FOOD                
+1  4        Fruits and vegetables                                    FRUITVEG     G  1  FOOD                
+1  5          Fresh fruits                                           FRSHFRUT     G  1  FOOD                
+1  6            Apples                                               110110       D  1  FOOD                
+1  6            Bananas                                              110210       D  1  FOOD                
+1  6            Oranges                                              110310       D  1  FOOD                
+1  6            Citrus fruits, excluding oranges                     110510       D  1  FOOD                
+1  6            Other fresh fruits                                   110410       D  1  FOOD                
+1  5          Fresh vegetables                                       FRESHVEG     G  1  FOOD                
+1  6            Potatoes                                             120110       D  1  FOOD                
+1  6            Lettuce                                              120210       D  1  FOOD                
+1  6            Tomatoes                                             120310       D  1  FOOD                
+1  6            Other fresh vegetables                               120410       D  1  FOOD                
+1  5          Processed fruits                                       PROCFRUT     G  1  FOOD                
+1  6            Frozen fruits and fruit juices                       FRZNFRUT     G  1  FOOD                
+1  7              Frozen orange juice                                130110       D  1  FOOD                
+1  7              Frozen fruits                                      130121       D  1  FOOD                
+1  7              Frozen fruit juices                                130122       D  1  FOOD                
+1  6            Canned fruits                                        130310       D  1  FOOD                
+1  6            Dried fruit                                          130320       D  1  FOOD                
+1  6            Fresh fruit juice                                    130211       D  1  FOOD                
+1  6            Canned and bottled fruit juice                       130212       D  1  FOOD                
+1  5          Processed vegetables                                   PROCVEG      G  1  FOOD                
+1  6            Frozen vegetables                                    140110       D  1  FOOD                
+1  6            Canned and dried vegetables and juices               CANDVEG      G  1  FOOD                
+1  7              Canned beans                                       140210       D  1  FOOD                
+1  7              Canned corn                                        140220       D  1  FOOD                
+1  7              Canned miscellaneous vegetables                    140230       D  1  FOOD                
+1  7              Dried peas                                         140320       D  1  FOOD                
+1  7              Dried beans                                        140330       D  1  FOOD                
+1  7              Dried miscellaneous vegetables                     140340       D  1  FOOD                
+1  7              Dried processed vegetables                         140310       D  1  FOOD                
+1  7              Frozen vegetable juices                            140410       D  1  FOOD                
+1  7              Fresh and canned vegetable juices                  140420       D  1  FOOD                
+1  4        Other food at home                                       OTHRFOOD     G  1  FOOD                
+1  5          Sugar and other sweets                                 SWEETS       G  1  FOOD                
+1  6            Candy and chewing gum                                150110       D  1  FOOD                
+1  6            Sugar                                                150211       D  1  FOOD                
+1  6            Artificial sweeteners                                150212       D  1  FOOD                
+1  6            Jams, preserves, other sweets                        150310       D  1  FOOD                
+1  5          Fats and oils                                          FATSOILS     G  1  FOOD                
+1  6            Margarine                                            160110       D  1  FOOD                
+1  6            Fats and oils                                        160211       D  1  FOOD                
+1  6            Salad dressings                                      160212       D  1  FOOD                
+1  6            Nondairy cream and imitation milk                    160310       D  1  FOOD                
+1  6            Peanut butter                                        160320       D  1  FOOD                
+1  5          Miscellaneous foods                                    MISCFOOD     G  1  FOOD                
+1  6            Frozen prepared foods                                FRZNPREP     G  1  FOOD                
+1  7              Frozen meals                                       180210       D  1  FOOD                
+1  7              Other frozen prepared foods                        180220       D  1  FOOD                
+1  6            Canned and packaged soups                            180110       D  1  FOOD                
+1  6            Potato chips, nuts, and other snacks                 SNACKS       G  1  FOOD                
+1  7              Potato chips and other snacks                      180310       D  1  FOOD                
+1  7              Nuts                                               180320       D  1  FOOD                
+1  6            Condiments and seasonings                            CONDMNTS     G  1  FOOD                
+1  7              Salt, spices, other seasonings                     180410       D  1  FOOD                
+1  7              Olives, pickles, relishes                          180420       D  1  FOOD                
+1  7              Sauces and gravies                                 180510       D  1  FOOD                
+1  7              Baking needs and miscellaneous products            180520       D  1  FOOD                
+1  6            Other canned and packaged prepared foods             OTHRPREP     G  1  FOOD                
+1  7              Prepared salads                                    180611       D  1  FOOD                
+1  7              Prepared desserts                                  180612       D  1  FOOD                
+1  7              Baby food                                          180620       D  1  FOOD                
+1  7              Miscellaneous prepared foods                       180710       D  1  FOOD                
+1  7              Vitamin supplements                                180720       D  1  FOOD                
+1  5          Nonalcoholic beverages                                 NALCBEVG     G  1  FOOD                
+1  6            Cola                                                 170110       D  1  FOOD                
+1  6            Other carbonated drinks                              170210       D  1  FOOD                
+1  6            Tea                                                  170520       D  1  FOOD                
+1  6            Coffee                                               COFFEE       G  1  FOOD                
+1  7              Roasted coffee                                     170310       D  1  FOOD                
+1  7              Instant and freeze dried coffee                    170410       D  1  FOOD                
+1  6            Noncarbonated fruit flavored drinks, including       170510       D  1  FOOD                
+2                 non-frozen lemonade                                                                       
+1  6            Other noncarbonated beverages and ice                170531       D  1  FOOD                
+1  6            Bottled water                                        170532       D  1  FOOD                
+1  6            Sports drinks                                        170533       D  1  FOOD                
+1  6            Nonalcoholic beer                                    200112       D  1  FOOD                
+1  3      Food away from home                                        FOODAWAY     G  1  FOOD                
+1  4        Meals at restaurants (except on trips)                   RESTRANT     G  1  FOOD                
+1  5          Lunch                                                  LUNCH        G  1  FOOD                
+1  6            Lunch at fast food, take-out, delivery, concession   190111       D  1  FOOD                
+2                 stands, buffet and cafeteria (other than employer                                         
+2                 and school cafeteria)                                                                     
+1  6            Lunch at full service restaurants                    190112       D  1  FOOD                
+1  6            Lunch at vending machines and mobile vendors         190113       D  1  FOOD                
+1  6            Lunch at employer and school cafeterias              190114       D  1  FOOD                
+1  5           Dinner                                                DINNER       G  1  FOOD                
+1  6            Dinner at fast food, take-out, delivery, concession  190211       D  1  FOOD                
+2                 stands, buffet and cafeteria (other than employer                                         
+2                 and school cafeteria)                                                                     
+1  6            Dinner at full service restaurants                   190212       D  1  FOOD                
+1  6            Dinner at vending machines and mobile vendors        190213       D  1  FOOD                
+1  6            Dinner at employer and school cafeterias             190214       D  1  FOOD                
+1  5          Snacks and nonalcoholic beverages                      SNKNABEV     G  1  FOOD                
+1  6            Snacks and nonalcoholic beverages at fast food,      190311       D  1  FOOD                
+2                 take-out, delivery, concession stands, buffet and                                         
+2                 cafeteria (other than employer and school                                                 
+2                 cafeteria)                                                                                
+1  6            Snacks and nonalcoholic beverages at full service    190312       D  1  FOOD                
+2                 restaurants                                                                               
+1  6            Snacks and nonalcoholic beverages at vending         190313       D  1  FOOD                
+2                 machines and mobile vendors                                                               
+1  6            Snacks and nonalcoholic beverages at employer and    190314       D  1  FOOD                
+2                 school cafeterias                                                                         
+1  5          Breakfast and brunch                                   BRKFBRUN     G  1  FOOD                
+1  6            Breakfast and brunch at fast food, take-out,         190321       D  1  FOOD                
+2                 delivery, concession stands, buffet and cafeteria                                         
+2                 (other than employer and school cafeteria)                                                
+1  6            Breakfast and brunch at full service restaurants     190322       D  1  FOOD                
+1  6            Breakfast and brunch at vending machines and mobile  190323       D  1  FOOD                
+2                 vendors                                                                                   
+1  6            Breakfast and brunch at employer and school          190324       D  1  FOOD                
+2                 cafeterias                                                                                
+1  2    Alcoholic beverages                                          ALCBEVG      G  1  EXPEND              
+1  3      At home                                                    ALCHOME      G  1  EXPEND              
+1  4        Beer and ale                                             200111       D  1  EXPEND              
+1  4        Whiskey                                                  200210       D  1  EXPEND              
+1  4        Wine                                                     200310       D  1  EXPEND              
+1  4        Other alcoholic beverages                                200410       D  1  EXPEND              
+1  3      Away from home                                             ALCAWAY      G  1  EXPEND              
+1  4        Beer and ale                                             BEERNALE     G  1  EXPEND              
+1  5          Beer and ale at fast food, take-out, delivery,         200511       D  1  EXPEND              
+2               concession stands, buffet and cafeteria                                                     
+1  5          Beer and ale at full service restaurants               200512       D  1  EXPEND              
+1  5          Beer and ale at vending machines and mobile vendors    200513       D  1  EXPEND              
+1  5          Beer at employer                                       200514       D  1  EXPEND              
+1  5          Beer at board                                          200515       D  1  EXPEND              
+1  5          Beer and ale at catered affairs                        200516       D  1  EXPEND              
+1  4        Wine                                                     WINE         G  1  EXPEND              
+1  5          Wine at fast food, take-out, delivery, concession      200521       D  1  EXPEND              
+2               stands, buffet and cafeteria                                                                
+1  5          Wine at full service restaurants                       200522       D  1  EXPEND              
+1  5          Wine at vending machines and mobile vendors            200523       D  1  EXPEND              
+1  5          Wine at employer                                       200524       D  1  EXPEND              
+1  5          Wine at board                                          200525       D  1  EXPEND              
+1  5          Wine at catered affairs                                200526       D  1  EXPEND              
+1  4        Other alcoholic beverages                                OTHALCBV     G  1  EXPEND              
+1  5          Other alcoholic beverages at fast food, take-out,      200531       D  1  EXPEND              
+2               delivery, concession stands, buffet and cafeteria                                           
+1  5          Other alcoholic beverages at full service restaurants  200532       D  1  EXPEND              
+1  5          Other alcoholic beverages at vending machines and      200533       D  1  EXPEND              
+2               mobile vendors                                                                              
+1  5          Other alcohol at employer                              200534       D  1  EXPEND              
+1  5          Other alcohol at board                                 200535       D  1  EXPEND              
+1  5          Other alcoholic beverages at catered affairs           200536       D  1  EXPEND              
+1  2    Housing                                                      HOUSING      G  1  EXPEND              
+1  3      Fuel and utilities                                         FUELUTL      G  1  EXPEND              
+1  4        Electricity and natural gas                              ELECNAT      G  1  EXPEND              
+1  5          Electricity                                            260110       D  1  EXPEND              
+1  5          Natural gas                                            260210       D  1  EXPEND              
+1  4        Fuel oil and other fuels                                 OTHRFUEL     G  1  EXPEND              
+1  5          Fuel oil                                               250110       D  1  EXPEND              
+1  5          Bottled and tank gas                                   250210       D  1  EXPEND              
+1  5          Coal                                                   250220       D  1  EXPEND              
+1  5          Miscellaneous fuels                                    250900       D  1  EXPEND              
+1  4        Telephone services                                       270000       D  1  EXPEND              
+1  3      Household operations                                       HHOPER       G  1  EXPEND              
+1  4        Other household expenses                                 HHOTHXPN     G  1  EXPEND              
+1  5          Repair of miscellaneous household equipment and        340913       D  1  EXPEND              
+2               furnishings                                                                                 
+1  5          Household laundry and dry cleaning, sent out           340520       D  1  EXPEND              
+2               (nonclothing) not coin-operated                                                             
+1  5          Coin-operated household laundry and dry cleaning       340530       D  1  EXPEND              
+2               (nonclothing)                                                                               
+1  3      Housekeeping supplies                                      HKPGSUPP     G  1  EXPEND              
+1  4        Laundry and cleaning supplies                            LAUNDRY      G  1  EXPEND              
+1  5          Soaps and detergents                                   330110       D  1  EXPEND              
+1  5          Other laundry cleaning products                        330210       D  1  EXPEND              
+1  4        Other household products                                 HKPGOTHR     G  1  EXPEND              
+1  5          Cleansing and toilet tissue, paper towels and napkins  330310       D  1  EXPEND              
+1  5          Miscellaneous household products                       330510       D  1  EXPEND              
+1  5          Lawn and garden supplies                               330610       D  1  EXPEND              
+1  4        Postage and stationery                                   POSTAGE      G  1  EXPEND              
+1  5          Stationery, stationery supplies, giftwrap              330410       D  1  EXPEND              
+1  5          Postage                                                340110       D  1  EXPEND              
+1  5          Delivery services                                      340120       D  1  EXPEND              
+1  3      Household furnishings and equipment                        HHFURNSH     G  1  EXPEND              
+1  4        Household textiles                                       HHTXTILE     G  1  EXPEND              
+1  5          Bathroom linens                                        280110       D  1  EXPEND              
+1  5          Bedroom linens                                         280120       D  1  EXPEND              
+1  5          Slipcovers, decorative pillows                         280220       D  1  EXPEND              
+1  5          Kitchen, dining room, other linens                     280140       D  1  EXPEND              
+1  4        Furniture                                                FURNITUR     G  1  EXPEND              
+1  5          Outdoor furniture                                      290430       D  1  EXPEND              
+1  4        Floor coverings                                          FLOORCOV     G  1  EXPEND              
+1  5          Room size rugs and other floor covering, nonpermanent  320110       D  1  EXPEND              
+1  4        Major appliances                                         MAJAPPL      G  1  EXPEND              
+1  5          Electric floor cleaning equipment                      320511       D  1  EXPEND              
+1  5          Sewing machines                                        320512       D  1  EXPEND              
+1  5          Miscellaneous household appliances                     300900       D  1  EXPEND              
+1  4        Small appliances, miscellaneous housewares               SMAPPHWR     G  1  EXPEND              
+1  5          Housewares                                             HOUSWARE     G  1  EXPEND              
+1  6            Nonelectric cookware                                 320370       D  1  EXPEND              
+1  6            Tableware, nonelectric kitchenware                   320380       D  1  EXPEND              
+1  6            Dinnerware, glassware, serving pieces                320345       D  1  EXPEND              
+1  5          Small appliances                                       SMLLAPPL     G  1  EXPEND              
+1  6            Portable heating and cooling equipment               320522       D  1  EXPEND              
+1  4        Miscellaneous household equipment                        MISCHHEQ     G  1  EXPEND              
+1  5          Infants'' equipment                                    320130       D  1  EXPEND              
+1  5          Laundry and cleaning equipment                         320140       D  1  EXPEND              
+1  5          Outdoor equipment                                      320150       D  1  EXPEND              
+1  5          Lamps, lighting fixtures, ceiling fans                 320221       D  1  EXPEND              
+1  5          Clocks and other household decorative items            320233       D  1  EXPEND              
+1  5          Telephones and accessories                             320232       D  1  EXPEND              
+1  5          Lawn and garden equipment                              320410       D  1  EXPEND              
+1  5          Power tools                                            320420       D  1  EXPEND              
+1  5          Hand tools                                             320902       D  1  EXPEND              
+1  5          Indoor plants, fresh flowers                           320903       D  1  EXPEND              
+1  5          Closet and storage items                               320904       D  1  EXPEND              
+1  5          Computer software                                      690119       D  1  EXPEND              
+1  5          Computer accessories                                   690120       D  1  EXPEND              
+1  5          Other hardware                                         320430       D  1  EXPEND              
+1  5          Miscellaneous household equipment and parts            320905       D  1  EXPEND              
+1  5          Luggage                                                430130       D  1  EXPEND              
+1  2    Apparel and services                                         APPAREL      G  1  EXPEND              
+1  3      Men and boys                                               MENBOYS      G  1  EXPEND              
+1  4        Men, 16 and over                                         MENS         G  1  EXPEND              
+1  5          Men''s sportcoats, tailored jackets                    360120       D  1  EXPEND              
+1  5          Men''s coats and jackets                               360210       D  1  EXPEND              
+1  5          Men''s underwear                                       360311       D  1  EXPEND              
+1  5          Men''s hosiery                                         360312       D  1  EXPEND              
+1  5          Men''s accessories                                     360330       D  1  EXPEND              
+1  5          Men''s active sportswear                               360350       D  1  EXPEND              
+1  5          Men''s shirts, sweaters, and vests                     360420       D  1  EXPEND              
+1  5          Men''s pants and shorts                                360513       D  1  EXPEND              
+1  5          Men''s uniforms                                        360901       D  1  EXPEND              
+1  4        Boys, 2 to 15                                            BOYS         G  1  EXPEND              
+1  5          Boy''s shirts and sweaters                             370125       D  1  EXPEND              
+1  5          Boys'' underwear                                       370211       D  1  EXPEND              
+1  5          Boys'' nightwear                                       370212       D  1  EXPEND              
+1  5          Boys'' hosiery                                         370213       D  1  EXPEND              
+1  5          Boys'' accessories                                     370220       D  1  EXPEND              
+1  5          Boys'' suits, sportcoats, vests                        370311       D  1  EXPEND              
+1  3      Women and girls                                            WMNSGRLS     G  1  EXPEND              
+1  4        Women, 16 and over                                       WOMENS       G  1  EXPEND              
+1  5          Women''s coats and jackets                             380110       D  1  EXPEND              
+1  5          Women''s dresses                                       380210       D  1  EXPEND              
+1  5          Women''s sportcoats, tailored jackets                  380311       D  1  EXPEND              
+1  5          Women''s sweaters, shirts, tops, vests                 380315       D  1  EXPEND              
+1  5          Women''s skirts                                        380320       D  1  EXPEND              
+1  5          Women''s pants and shorts                              380333       D  1  EXPEND              
+1  5          Women''s active sportswear                             380340       D  1  EXPEND              
+1  5          Women''s sleepwear                                     380410       D  1  EXPEND              
+1  5          Women''s undergarments                                 380420       D  1  EXPEND              
+1  5          Women''s hosiery                                       380430       D  1  EXPEND              
+1  5          Women''s accessories                                   380901       D  1  EXPEND              
+1  5          Women''s uniforms                                      380902       D  1  EXPEND              
+1  4        Girls, 2 to 15                                           GIRLS        G  1  EXPEND              
+1  5          Girls'' coats and jackets                              390110       D  1  EXPEND              
+1  5          Girls'' dresses and suits                              390120       D  1  EXPEND              
+1  5          Girls'' shirts, blouses, sweaters, vests               390210       D  1  EXPEND              
+1  5          Girls'' active sportswear                              390230       D  1  EXPEND              
+1  5          Girls'' underwear and sleepwear                        390310       D  1  EXPEND              
+1  5          Girls'' hosiery                                        390321       D  1  EXPEND              
+1  5          Girls'' accessories                                    390322       D  1  EXPEND              
+1  3      Children under 2                                           INFANT       G  1  EXPEND              
+1  4        Infant dresses, outerwear                                410120       D  1  EXPEND              
+1  4        Infant underwear                                         410130       D  1  EXPEND              
+1  4        Infant nightwear, loungewear                             410140       D  1  EXPEND              
+1  4        Infant accessories                                       410901       D  1  EXPEND              
+1  3      Footwear                                                   FOOTWEAR     G  1  EXPEND              
+1  4        Men''s footwear                                          400110       D  1  EXPEND              
+1  4        Boys'' footwear                                          400210       D  1  EXPEND              
+1  4        Women''s footwear                                        400310       D  1  EXPEND              
+1  4        Girls'' footwear                                         400220       D  1  EXPEND              
+1  3      Other apparel products and services                        OTHAPPRL     G  1  EXPEND              
+1  4        Material and supplies for sewing, needlework, quilting   420115       D  1  EXPEND              
+2             (includes household items)                                                                    
+1  4        Watches                                                  430110       D  1  EXPEND              
+1  2    Transportation                                               TRANS        G  1  EXPEND              
+1  3      Gasoline, motor oil, and additives                         GASMOTA      G  1  EXPEND              
+1  4        Gasoline and diesel fuel                                 GASHDESL     G  1  EXPEND              
+1  5          Gasoline                                               470111       D  1  EXPEND              
+1  5          Diesel fuel                                            470112       D  1  EXPEND              
+1  4        Motor oil, coolants and other additives                  MOTCOLA      G  1  EXPEND              
+1  5          Motor oil                                              470211       D  1  EXPEND              
+1  5          Coolant, brake fluid, transmission fluid, and other    470220       D  1  EXPEND              
+2               additives                                                                                   
+1  3      Other vehicle expenses                                     VEHOTHXP     G  1  EXPEND              
+1  4        Maintenance and repairs                                  CAREPAIR     G  1  EXPEND              
+1  5          Vehicle products and cleaning services                 480212       D  1  EXPEND              
+1  5          Misc. auto repair, servicing                           490000       D  1  EXPEND              
+1  5          Gas tank repair, replacement                           490316       D  1  EXPEND              
+1  4        Vehicle insurance                                        500110       D  1  EXPEND              
+1  4        Vehicle rental, leases, licenses, and other charges      VEHRNTLC     G  1  EXPEND              
+1  5          Tolls or electronic toll passes                        520541       D  1  EXPEND              
+1  3      Public and other transportation                            PUBTRANS     G  1  EXPEND              
+1  4        Taxi fares and limousine services                        530412       D  1  EXPEND              
+1  1    Healthcare                                                   HEALTH       G  1  EXPEND              
+1  3      Medical services                                           MEDSERVS     G  1  EXPEND              
+1  4        Repair of medical equipment                              570902       D  1  EXPEND              
+1  3      Drugs                                                      DRUGS        G  1  EXPEND              
+1  4        Nonprescription drugs                                    550210       D  1  EXPEND              
+1  4        Nonprescription vitamins                                 550410       D  1  EXPEND              
+1  3      Medical supplies                                           MEDSUPPL     G  1  EXPEND              
+1  4        Topicals and dressings                                   550310       D  1  EXPEND              
+1  4        Adult diapers                                            640430       D  1  EXPEND              
+1  1    Entertainment                                                ENTRTAIN     G  1  EXPEND              
+1  3      Fees and admissions                                        FEESADM      G  1  EXPEND              
+1  4        Fees for participant sports                              620121       D  1  EXPEND              
+1  4        Fees for recreational lessons                            620310       D  1  EXPEND              
+1  3      Audio and visual equipment and services                    TVAUDIO      G  1  EXPEND              
+1  4        Stereos, radios, speakers, and sound components          310316       D  1  EXPEND              
+2             including those in vehicles                                                                   
+1  4        Cable and satellite television services                  270310       D  1  EXPEND              
+1  4        Phonographs                                              310312       D  1  EXPEND              
+1  4        Digital media players and recorders                      310315       D  1  EXPEND              
+1  4        Miscellaneous sound equipment                            310331       D  1  EXPEND              
+1  4        Miscellaneous video equipment                            310335       D  1  EXPEND              
+1  4        Sound equipment accessories                              310332       D  1  EXPEND              
+1  4        Video cassettes, tapes, and discs                        310220       D  1  EXPEND              
+1  4        Video game software                                      310231       D  1  EXPEND              
+1  4        Video game hardware and accessories                      310232       D  1  EXPEND              
+1  3      Pets, toys, hobbies, and playground equipment              PETSPLAY     G  1  EXPEND              
+1  4        Pets                                                     PETS         G  1  EXPEND              
+1  5          Pet food                                               610310       D  1  EXPEND              
+1  5          Pet purchase, supplies, medicine                       610320       D  1  EXPEND              
+1  5          Vet services                                           620420       D  1  EXPEND              
+1  4        Toys, games, arts and crafts, and tricycles              610110       D  1  EXPEND              
+1  4        Playground equipment                                     610120       D  1  EXPEND              
+1  3      Other entertainment supplies, equipment, and services      ENTEROTH     G  1  EXPEND              
+1  4        Sports, recreation and exercise equipment                RECEQUIP     G  1  EXPEND              
+1  5          Athletic gear, game tables, and exercise equipment     600210       D  1  EXPEND              
+1  5          Camping equipment                                      600410       D  1  EXPEND              
+1  5          Hunting and fishing equipment                          600420       D  1  EXPEND              
+1  5          Global positioning system devices                      600903       D  1  EXPEND              
+1  4        Photographic equipment, supplies and services            PHOTOEQ      G  1  EXPEND              
+1  5          Other photographic supplies                            610220       D  1  EXPEND              
+1  5          Photographer fees                                      620320       D  1  EXPEND              
+1  4        Fireworks                                                610901       D  1  EXPEND              
+1  4        Souvenirs                                                610902       D  1  EXPEND              
+1  4        Visual goods                                             610903       D  1  EXPEND              
+1  4        Pinball, electronic video games                          620913       D  1  EXPEND              
+1  3      Personal care products                                     PERSPROD     G  1  EXPEND              
+1  4        Hair care products                                       640110       D  1  EXPEND              
+1  4        Nonelectric articles for the hair                        640120       D  1  EXPEND              
+1  4        Oral hygiene products, articles                          640210       D  1  EXPEND              
+1  4        Shaving needs                                            640220       D  1  EXPEND              
+1  4        Cosmetics, perfume, bath preparations                    640310       D  1  EXPEND              
+1  4        Deodorants, feminine hygiene, miscellaneous personal     640410       D  1  EXPEND              
+2             care                                                                                          
+1  4        Electric personal care appliances                        640420       D  1  EXPEND              
+1  3      Personal care services                                     PERSSERV     G  1  EXPEND              
+1  4        Personal care service for females                        650110       D  1  EXPEND              
+1  4        Personal care service for males                          650210       D  1  EXPEND              
+1  4        Repair of personal care appliances                       650900       D  1  EXPEND              
+1  2    Reading                                                      READING      G  1  EXPEND              
+1  3      Newsletters                                                590900       D  1  EXPEND              
+1  3      Digital book readers                                       690118       D  1  EXPEND              
+1  2    Education                                                    EDUCATN      G  1  EXPEND              
+1  3      School supplies, etc. - unspecified                        660000       D  1  EXPEND              
+1  2    Tobacco products and smoking supplies                        TOBACCO      G  1  EXPEND              
+1  3      Smoking accessories                                        630220       D  1  EXPEND              
+1  3      Marijuana                                                  630900       D  1  EXPEND              
+1  2    Miscellaneous                                                MISC         G  1  EXPEND              
+1  3      Miscellaneous fees                                         620925       D  1  EXPEND              
+1  3      Lotteries and pari-mutuel losses                           620926       D  1  EXPEND              
+1  3      Miscellaneous personal services                            680903       D  1  EXPEND              
+*  *  Sources of income and personal taxes:                          TITLESI      T  1  INCOME              
+1  1    Money income before taxes                                    INCBEFTX     G  1  INCOME              
+1  2      Wages and salaries                                         900000       D  1  INCOME              
+1  2      Self-employment income                                     900160       D  1  INCOME              
+1  2      Social Security, private and government retirement         RETIRINC     G  1  INCOME              
+1  3        Social Security and railroad retirement income           900030       D  1  INCOME              
+1  3        Retirement, survivors, disability income                 900170       D  1  INCOME              
+1  2      Interest, dividends, rental income, other property income  INDIVRNT     G  1  INCOME              
+1  3        Interest and dividends                                   900180       D  1  INCOME              
+1  3        Net room/rental income                                   900190       D  1  INCOME              
+1  3        Royalty, estate, trust income                            900200       D  1  INCOME              
+1  2      Public assistance, supplemental security income, food      WELFARE      G  1  INCOME              
+2           stamps                                                                                          
+1  3        Supplemental security income                             900090       D  1  INCOME              
+1  3        Public assistance                                        900120       D  1  INCOME              
+1  3        Food stamps                                              900150       D  1  INCOME              
+1  2      Unemployment and workers'' compensation, veterans''        OTHREGIN     G  1  INCOME              
+2           benefits, and regular contributions for support                                                 
+1  3        Other regular income                                     900210       D  1  INCOME              
+1  2      Other income                                               OTHRINC      G  1  INCOME              
+1  3        Meals as pay                                             800700       D  1  INCOME              
+1  3        Rent as pay                                              800710       D  1  INCOME              
+1  3        Other income                                             900140       D  1  INCOME              
+*  *  Gifts of goods and services, total                             GFTTOTL      G  1  ADDENDA             
+1  1    Food                                                         GFTFOOD      G  1  ADDENDA             
+1  3      Flour                                                      010110       D  1  ADDENDA             
+1  3      Prepared flour mixes                                       010120       D  1  ADDENDA             
+1  3      Ready-to-eat and cooked cereals                            010210       D  1  ADDENDA             
+1  3      Rice                                                       010310       D  1  ADDENDA             
+1  3      Pasta, cornmeal and other cereal products                  010320       D  1  ADDENDA             
+1  3      White bread                                                020110       D  1  ADDENDA             
+1  3      Bread, other than white                                    020210       D  1  ADDENDA             
+1  3      Cookies                                                    020510       D  1  ADDENDA             
+1  3      Crackers                                                   020610       D  1  ADDENDA             
+1  3      Frozen and refrigerated bakery products                    020810       D  1  ADDENDA             
+1  3      Biscuits and rolls                                         020310       D  1  ADDENDA             
+1  3      Cakes and cupcakes                                         020410       D  1  ADDENDA             
+1  3      Bread and cracker products                                 020620       D  1  ADDENDA             
+1  3      Sweetrolls, coffee cakes, doughnuts                        020710       D  1  ADDENDA             
+1  3      Pies, tarts, turnovers                                     020820       D  1  ADDENDA             
+1  3      Ground beef                                                030110       D  1  ADDENDA             
+1  3      Chuck roast                                                030210       D  1  ADDENDA             
+1  3      Round roast                                                030310       D  1  ADDENDA             
+1  3      Other roast                                                030410       D  1  ADDENDA             
+1  3      Round steak                                                030510       D  1  ADDENDA             
+1  3      Sirloin steak                                              030610       D  1  ADDENDA             
+1  3      Other steak                                                030710       D  1  ADDENDA             
+1  3      Other beef                                                 030810       D  1  ADDENDA             
+1  3      Bacon                                                      040110       D  1  ADDENDA             
+1  3      Pork chops                                                 040210       D  1  ADDENDA             
+1  3      Ham, not canned                                            040310       D  1  ADDENDA             
+1  3      Canned ham                                                 040610       D  1  ADDENDA             
+1  3      Sausage                                                    040510       D  1  ADDENDA             
+1  3      Other pork                                                 040410       D  1  ADDENDA             
+1  3      Frankfurters                                               050110       D  1  ADDENDA             
+1  3      Bologna, liverwurst, salami                                050210       D  1  ADDENDA             
+1  3      Other lunchmeats                                           050310       D  1  ADDENDA             
+1  3      Lamb and organ meats                                       050410       D  1  ADDENDA             
+1  3      Mutton, goat and game                                      050900       D  1  ADDENDA             
+1  3      Fresh and frozen whole chicken                             060110       D  1  ADDENDA             
+1  3      Fresh and frozen chicken parts                             060210       D  1  ADDENDA             
+1  3      Other poultry                                              060310       D  1  ADDENDA             
+1  3      Canned fish and seafood                                    070110       D  1  ADDENDA             
+1  3      Fresh fish and shellfish                                   070230       D  1  ADDENDA             
+1  3      Frozen fish and shellfish                                  070240       D  1  ADDENDA             
+1  3      Eggs                                                       080110       D  1  ADDENDA             
+1  3      Fresh milk, all types                                      090110       D  1  ADDENDA             
+1  3      Cream                                                      090210       D  1  ADDENDA             
+1  3      Butter                                                     100110       D  1  ADDENDA             
+1  3      Cheese                                                     100210       D  1  ADDENDA             
+1  3      Ice cream and related products                             100410       D  1  ADDENDA             
+1  3      Miscellaneous dairy products                               100510       D  1  ADDENDA             
+1  3      Apples                                                     110110       D  1  ADDENDA             
+1  3      Bananas                                                    110210       D  1  ADDENDA             
+1  3      Oranges                                                    110310       D  1  ADDENDA             
+1  3      Citrus fruits, excluding oranges                           110510       D  1  ADDENDA             
+1  3      Other fresh fruits                                         110410       D  1  ADDENDA             
+1  3      Potatoes                                                   120110       D  1  ADDENDA             
+1  3      Lettuce                                                    120210       D  1  ADDENDA             
+1  3      Tomatoes                                                   120310       D  1  ADDENDA             
+1  3      Other fresh vegetables                                     120410       D  1  ADDENDA             
+1  3      Frozen orange juice                                        130110       D  1  ADDENDA             
+1  3      Frozen fruits                                              130121       D  1  ADDENDA             
+1  3      Frozen fruit juices                                        130122       D  1  ADDENDA             
+1  3      Canned fruits                                              130310       D  1  ADDENDA             
+1  3      Dried fruit                                                130320       D  1  ADDENDA             
+1  3      Fresh fruit juice                                          130211       D  1  ADDENDA             
+1  3      Canned and bottled fruit juice                             130212       D  1  ADDENDA             
+1  3      Frozen vegetables                                          140110       D  1  ADDENDA             
+1  3      Canned beans                                               140210       D  1  ADDENDA             
+1  3      Canned corn                                                140220       D  1  ADDENDA             
+1  3      Canned miscellaneous vegetables                            140230       D  1  ADDENDA             
+1  3      Dried peas                                                 140320       D  1  ADDENDA             
+1  3      Dried beans                                                140330       D  1  ADDENDA             
+1  3      Dried miscellaneous vegetables                             140340       D  1  ADDENDA             
+1  3      Dried processed vegetables                                 140310       D  1  ADDENDA             
+1  3      Frozen vegetable juices                                    140410       D  1  ADDENDA             
+1  3      Fresh and canned vegetable juices                          140420       D  1  ADDENDA             
+1  3      Candy and chewing gum                                      150110       D  1  ADDENDA             
+1  3      Sugar                                                      150211       D  1  ADDENDA             
+1  3      Artificial sweeteners                                      150212       D  1  ADDENDA             
+1  3      Jams, preserves, other sweets                              150310       D  1  ADDENDA             
+1  3      Margarine                                                  160110       D  1  ADDENDA             
+1  3      Fats and oils                                              160211       D  1  ADDENDA             
+1  3      Salad dressings                                            160212       D  1  ADDENDA             
+1  3      Nondairy cream and imitation milk                          160310       D  1  ADDENDA             
+1  3      Peanut butter                                              160320       D  1  ADDENDA             
+1  3      Frozen meals                                               180210       D  1  ADDENDA             
+1  3      Other frozen prepared foods                                180220       D  1  ADDENDA             
+1  3      Canned and packaged soups                                  180110       D  1  ADDENDA             
+1  3      Potato chips and other snacks                              180310       D  1  ADDENDA             
+1  3      Nuts                                                       180320       D  1  ADDENDA             
+1  3      Salt, spices, other seasonings                             180410       D  1  ADDENDA             
+1  3      Olives, pickles, relishes                                  180420       D  1  ADDENDA             
+1  3      Sauces and gravies                                         180510       D  1  ADDENDA             
+1  3      Baking needs and miscellaneous products                    180520       D  1  ADDENDA             
+1  3      Prepared salads                                            180611       D  1  ADDENDA             
+1  3      Vitamin supplements                                        180720       D  1  ADDENDA             
+1  3      Prepared desserts                                          180612       D  1  ADDENDA             
+1  3      Baby food                                                  180620       D  1  ADDENDA             
+1  3      Miscellaneous prepared foods                               180710       D  1  ADDENDA             
+1  3      Cola                                                       170110       D  1  ADDENDA             
+1  3      Other carbonated drinks                                    170210       D  1  ADDENDA             
+1  3      Roasted coffee                                             170310       D  1  ADDENDA             
+1  3      Instant and freeze dried coffee                            170410       D  1  ADDENDA             
+1  3      Tea                                                        170520       D  1  ADDENDA             
+1  3      Noncarbonated fruit flavored drinks, including non-frozen  170510       D  1  ADDENDA             
+2           lemonade                                                                                        
+1  3      Other noncarbonated beverages and ice                      170531       D  1  ADDENDA             
+1  3      Bottled water                                              170532       D  1  ADDENDA             
+1  3      Sports drinks                                              170533       D  1  ADDENDA             
+1  3      Nonalcoholic beer                                          200112       D  1  ADDENDA             
+1  1    Housing                                                      GFTHOUS      G  1  ADDENDA             
+1  3      Housekeeping supplies                                      GFTHKPGS     G  1  ADDENDA             
+1  4        Laundry and cleaning supplies                            GFTLAUN      G  1  ADDENDA             
+1  5          Soaps and detergents                                   330110       D  1  ADDENDA             
+1  5          Other laundry cleaning products                        330210       D  1  ADDENDA             
+1  4        Other household products                                 GFTOHKPG     G  1  ADDENDA             
+1  5          Cleansing and toilet tissue, paper towels and napkins  330310       D  1  ADDENDA             
+1  5          Miscellaneous household products                       330510       D  1  ADDENDA             
+1  5          Lawn and garden supplies                               330610       D  1  ADDENDA             
+1  4        Postage and stationery                                   GFTPOST      G  1  ADDENDA             
+1  5          Stationery, stationery supplies, giftwrap              330410       D  1  ADDENDA             
+1  5          Postage                                                340110       D  1  ADDENDA             
+1  5          Delivery services                                      340120       D  1  ADDENDA             
+1  3      Household textiles                                         GFTHHTXT     G  1  ADDENDA             
+1  4        Bathroom linens                                          280110       D  1  ADDENDA             
+1  4        Bedroom linens                                           280120       D  1  ADDENDA             
+1  4        Kitchen, dining room, other linens                       280140       D  1  ADDENDA             
+1  4        Slipcovers, decorative pillows                           280220       D  1  ADDENDA             
+1  3      Appliances and miscellaneous housewares                    GFTHWARS     G  1  ADDENDA             
+1  4        Major appliances                                         GFTMAPPG     G  1  ADDENDA             
+1  5          Electric floor cleaning equipment                      320511       D  1  ADDENDA             
+1  5          Sewing machines                                        320512       D  1  ADDENDA             
+1  5          Miscellaneous household appliances                     300900       D  1  ADDENDA             
+1  4        Small appliances and miscellaneous housewares            GFTSAPPG     G  1  ADDENDA             
+1  5          Dinnerware, glassware, serving pieces                  320345       D  1  ADDENDA             
+1  5          Nonelectric cookware                                   320370       D  1  ADDENDA             
+1  5          Tableware, nonelectric kitchenware                     320380       D  1  ADDENDA             
+1  5          Portable heating and cooling equipment                 320522       D  1  ADDENDA             
+1  3      Miscellaneous household equipment                          GFTMISCH     G  1  ADDENDA             
+1  4        Infants'' equipment                                      320130       D  1  ADDENDA             
+1  4        Laundry and cleaning equipment                           320140       D  1  ADDENDA             
+1  4        Outdoor equipment                                        320150       D  1  ADDENDA             
+1  4        Lamps, lighting fixtures, ceiling fans                   320221       D  1  ADDENDA             
+1  4        Clocks and other household decorative items              320233       D  1  ADDENDA             
+1  4        Telephones and accessories                               320232       D  1  ADDENDA             
+1  4        Lawn and garden equipment                                320410       D  1  ADDENDA             
+1  4        Power tools                                              320420       D  1  ADDENDA             
+1  4        Hand tools                                               320902       D  1  ADDENDA             
+1  4        Indoor plants, fresh flowers                             320903       D  1  ADDENDA             
+1  4        Closet and storage items                                 320904       D  1  ADDENDA             
+1  4        Miscellaneous household equipment and parts              320905       D  1  ADDENDA             
+1  4        Computer software                                        690119       D  1  ADDENDA             
+1  4        Computer accessories                                     690120       D  1  ADDENDA             
+1  4        Other hardware                                           320430       D  1  ADDENDA             
+1  4        Luggage                                                  430130       D  1  ADDENDA             
+1  3      Other housing                                              GFTOTHH      G  1  ADDENDA             
+1  4        Repair of miscellaneous household equipment and          340913       D  1  ADDENDA             
+2             furnishings                                                                                   
+1  4        Outdoor furniture                                        290430       D  1  ADDENDA             
+1  4        Room size rugs and other floor covering, nonpermanent    320110       D  1  ADDENDA             
+1  1    Apparel and services                                         GFTCLOTH     G  1  ADDENDA             
+1  2      Males, 2 and over                                          GFTMALE      G  1  ADDENDA             
+1  3        Men''s sportcoats, tailored jackets                      360120       D  1  ADDENDA             
+1  3        Men''s coats and jackets                                 360210       D  1  ADDENDA             
+1  3        Men''s underwear                                         360311       D  1  ADDENDA             
+1  3        Men''s hosiery                                           360312       D  1  ADDENDA             
+1  3        Men''s accessories                                       360330       D  1  ADDENDA             
+1  3        Men''s active sportswear                                 360350       D  1  ADDENDA             
+1  3        Men''s shirts, sweaters, and vests                       360420       D  1  ADDENDA             
+1  3        Men''s pants and shorts                                  360513       D  1  ADDENDA             
+1  3        Men''s uniforms                                          360901       D  1  ADDENDA             
+1  3        Boy''s shirts and sweaters                               370125       D  1  ADDENDA             
+1  3        Boys'' underwear                                         370211       D  1  ADDENDA             
+1  3        Boys'' nightwear                                         370212       D  1  ADDENDA             
+1  3        Boys'' hosiery                                           370213       D  1  ADDENDA             
+1  3        Boys'' accessories                                       370220       D  1  ADDENDA             
+1  3        Boys'' suits, sportcoats, vests                          370311       D  1  ADDENDA             
+1  2      Females, 2 and over                                        GFTFEMAL     G  1  ADDENDA             
+1  3        Women''s coats and jackets                               380110       D  1  ADDENDA             
+1  3        Women''s dresses                                         380210       D  1  ADDENDA             
+1  3        Women''s sportcoats, tailored jackets                    380311       D  1  ADDENDA             
+1  3        Women''s sweaters, shirts, tops, vests                   380315       D  1  ADDENDA             
+1  3        Women''s skirts                                          380320       D  1  ADDENDA             
+1  3        Women''s pants and shorts                                380333       D  1  ADDENDA             
+1  3        Women''s active sportswear                               380340       D  1  ADDENDA             
+1  3        Women''s sleepwear                                       380410       D  1  ADDENDA             
+1  3        Women''s undergarments                                   380420       D  1  ADDENDA             
+1  3        Women''s hosiery                                         380430       D  1  ADDENDA             
+1  3        Women''s accessories                                     380901       D  1  ADDENDA             
+1  3        Women''s uniforms                                        380902       D  1  ADDENDA             
+1  3        Girls'' coats and jackets                                390110       D  1  ADDENDA             
+1  3        Girls'' dresses and suits                                390120       D  1  ADDENDA             
+1  3        Girls'' shirts, blouses, sweaters, vests                 390210       D  1  ADDENDA             
+1  3        Girls'' active sportswear                                390230       D  1  ADDENDA             
+1  3        Girls'' underwear and sleepwear                          390310       D  1  ADDENDA             
+1  3        Girls'' hosiery                                          390321       D  1  ADDENDA             
+1  3        Girls'' accessories                                      390322       D  1  ADDENDA             
+1  2      Children under 2                                           GFTINFNT     G  1  ADDENDA             
+1  3        Infant dresses, outerwear                                410120       D  1  ADDENDA             
+1  3        Infant underwear                                         410130       D  1  ADDENDA             
+1  3        Infant nightwear, loungewear                             410140       D  1  ADDENDA             
+1  3        Infant accessories                                       410901       D  1  ADDENDA             
+1  2      Other apparel products and services                        GFTOTHCL     G  1  ADDENDA             
+1  3        Men''s footwear                                          400110       D  1  ADDENDA             
+1  3        Boys'' footwear                                          400210       D  1  ADDENDA             
+1  3        Women''s footwear                                        400310       D  1  ADDENDA             
+1  3        Girls'' footwear                                         400220       D  1  ADDENDA             
+1  3        Material and supplies for sewing, needlework, quilting   420115       D  1  ADDENDA             
+2             (includes household items)                                                                    
+1  3        Watches                                                  430110       D  1  ADDENDA             
+1  1    Transportation                                               GFTTRANS     G  1  ADDENDA             
+1  2      Vehicle products and cleaning services                     480212       D  1  ADDENDA             
+1  2      Misc. auto repair, servicing                               490000       D  1  ADDENDA             
+1  2      Gas tank repair, replacement                               490316       D  1  ADDENDA             
+1  2      Tolls or electronic toll passes                            520541       D  1  ADDENDA             
+1  1    Healthcare                                                   GFTHEALT     G  1  ADDENDA             
+1  2      Repair of medical equipment                                570902       D  1  ADDENDA             
+1  2      Nonprescription drugs                                      550210       D  1  ADDENDA             
+1  2      Nonprescription vitamins                                   550410       D  1  ADDENDA             
+1  2      Topicals and dressings                                     550310       D  1  ADDENDA             
+1  2      Adult diapers                                              640430       D  1  ADDENDA             
+1  1    Entertainment                                                GFTENTRT     G  1  ADDENDA             
+1  2      Other entertainment                                        GFTOENT      G  1  ADDENDA             
+1  3        Fees for recreational lessons                            620310       D  1  ADDENDA             
+1  3        Cable and satellite television services                  270310       D  1  ADDENDA             
+1  3        Stereos, radios, speakers, and sound components          310316       D  1  ADDENDA             
+2            including those in vehicles                                                                   
+1  3        Phonographs                                              310312       D  1  ADDENDA             
+1  3        Digital media players and recorders                      310315       D  1  ADDENDA             
+1  3        Miscellaneous sound equipment                            310331       D  1  ADDENDA             
+1  3        Miscellaneous video equipment                            310335       D  1  ADDENDA             
+1  3        Sound equipment accessories                              310332       D  1  ADDENDA             
+1  3        Video cassettes, tapes, and discs                        310220       D  1  ADDENDA             
+1  3        Video game software                                      310231       D  1  ADDENDA             
+1  3        Video game hardware and accessories                      310232       D  1  ADDENDA             
+1  3        CDs, records, audio tapes                                310340       D  1  ADDENDA             
+1  3        Pet food                                                 610310       D  1  ADDENDA             
+1  3        Pet purchase, supplies, medicine                         610320       D  1  ADDENDA             
+1  3        Playground equipment                                     610120       D  1  ADDENDA             
+1  3        Vet services                                             620420       D  1  ADDENDA             
+1  3        Athletic gear, game tables, and exercise equipment       600210       D  1  ADDENDA             
+1  3        Camping equipment                                        600410       D  1  ADDENDA             
+1  3        Hunting and fishing equipment                            600420       D  1  ADDENDA             
+1  3        Global positioning system devices                        600903       D  1  ADDENDA             
+1  3        Other photographic supplies                              610220       D  1  ADDENDA             
+1  3        Photographer fees                                        620320       D  1  ADDENDA             
+1  3        Fireworks                                                610901       D  1  ADDENDA             
+1  3        Souvenirs                                                610902       D  1  ADDENDA             
+1  3        Visual goods                                             610903       D  1  ADDENDA             
+1  3        Pinball, electronic video games                          620913       D  1  ADDENDA             
+1  2      Toys, games, arts and crafts, and tricycles                610110       D  1  ADDENDA             
+1  1    Education                                                    GFTEDUC      G  1  ADDENDA             
+1  2      School supplies, etc. - unspecified                        660000       D  1  ADDENDA             
+1  1    All other gifts                                              GIFTSOTH     G  1  ADDENDA             
+1  2      Other alcoholic beverages                                  200410       D  1  ADDENDA             
+1  2      Electricity                                                260110       D  1  ADDENDA             
+1  2      Natural gas                                                260210       D  1  ADDENDA             
+1  2      Fuel oil                                                   250110       D  1  ADDENDA             
+1  2      Bottled and tank gas                                       250210       D  1  ADDENDA             
+1  2      Coal                                                       250220       D  1  ADDENDA             
+1  2      Miscellaneous fuels                                        250900       D  1  ADDENDA             
+1  2      Telephone services                                         270000       D  1  ADDENDA             
+1  2      Diesel fuel                                                470112       D  1  ADDENDA             
+1  2      Gasoline                                                   470111       D  1  ADDENDA             
+1  2      Motor oil                                                  470211       D  1  ADDENDA             
+1  2      Coolant, brake fluid, transmission fluid, and other        470220       D  1  ADDENDA             
+2           additives                                                                                       
+1  2      Hair care products                                         640110       D  1  ADDENDA             
+1  2      Nonelectric articles for the hair                          640120       D  1  ADDENDA             
+1  2      Oral hygiene products, articles                            640210       D  1  ADDENDA             
+1  2      Cosmetics, perfume, bath preparations                      640310       D  1  ADDENDA             
+1  2      Deodorants, feminine hygiene, miscellaneous personal care  640410       D  1  ADDENDA             
+1  2      Newsletters                                                590900       D  1  ADDENDA             
+1  2      Smoking accessories                                        630220       D  1  ADDENDA             
+1  2      Marijuana                                                  630900       D  1  ADDENDA             
+1  2      Miscellaneous fees                                         620925       D  1  ADDENDA             
+1  2      Lotteries and pari-mutuel losses                           620926       D  1  ADDENDA             
+1  2      Miscellaneous personal services                            680903       D  1  ADDENDA             
+1  2      Shaving needs                                              640220       D  1  ADDENDA             
