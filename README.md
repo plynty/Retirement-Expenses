@@ -31,14 +31,14 @@ One answers a series of questions and then gets directed to how much they need t
 # **We used R to analyze the data.**
 -------------------------------------
 
-#### *How to install R*
+### *How to install R*
 
 * Go to CRAN, click download for whatever computer you are using(Linux, MacOS, Windows) and download the installer for the latest R version.
 * Click the installer file.
 * Select language to be used during installation.
 * Follow the instructions of the installer.
 
-#### R packages used
+### R packages used
 ##### Integrated Mean and SE.R
 + stringr 
 + reshape2
@@ -76,16 +76,16 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 # *Filtering the data*
 
 
-## **Code used**
+### **Code used**
 ==========
-#### Integrated Mean and SE.R code
+##### Integrated Mean and SE.R code
 The aim of this was is to:
 + input paramenters for the year whose data we will be using.
 + put the directory from which you will clone the date from.
 + put the income brackets which we want to use but we leave -Inf and 0 as they are and add new incomes we want to use. Reason being in the event that we have data where a company ran a loss we can include the loss in the data frame.
 + age range for the data we are looking into is also inputted.
 
-#### Integrated Mean and SE Roll Ups.R
+##### Integrated Mean and SE Roll Ups.R
 + Creating rollup categories.
 
 
