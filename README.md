@@ -50,7 +50,7 @@ Integrated Mean and SE Roll ups.R
 * stringr
 
 
-# *Data*
+## *Data*
 ===========
 ##### *How the data was gathered*
 The information for consumer expenditure for the year 2014 (the most recent public data from them) was gathered from the Bureau of Labor and Statistics. Both diary and interview survey data was used.
@@ -76,7 +76,7 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 ##### *Filtering the data*
 
 
-## **Code used**
+##### **Code used**
 ==========
 ##### Integrated Mean and SE.R code
 The aim of this was is to:
@@ -85,7 +85,7 @@ The aim of this was is to:
 + put the income brackets which we want to use but we leave -Inf and 0 as they are and add new incomes we want to use. Reason being in the event that we have data where a company ran a loss we can include the loss in the data frame.
 + age range for the data we are looking into is also inputted.
 
-#### Integrated Mean and SE Roll Ups.R
+##### Integrated Mean and SE Roll Ups.R
 + Creating rollup categories.
 
 
