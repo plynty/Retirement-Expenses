@@ -39,18 +39,18 @@ One answers a series of questions and then gets directed to how much they need t
 * Follow the instructions of the installer.
 
 #### R packages used
-### Integrated Mean and SE.R
+##### Integrated Mean and SE.R
 + stringr 
 + reshape2
 + sqldf
 + RSQLite
 + plyr
 
-Integrated Mean and SE Roll ups.R
+##### Integrated Mean and SE Roll ups.R
 * stringr
 
 
-## *Data*
+# *Data*
 ===========
 ##### *How the data was gathered*
 The information for consumer expenditure for the year 2014 (the most recent public data from them) was gathered from the Bureau of Labor and Statistics. Both diary and interview survey data was used.
@@ -73,19 +73,19 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 * Interview data: http://www.bls.gov/cex/2014/csxintvw.pdf
 * Diary data: http://www.bls.gov/cex/2014/csxdiary.pdf
 
-##### *Filtering the data*
+# *Filtering the data*
 
 
-##### **Code used**
+## **Code used**
 ==========
-##### Integrated Mean and SE.R code
+#### Integrated Mean and SE.R code
 The aim of this was is to:
 + input paramenters for the year whose data we will be using.
 + put the directory from which you will clone the date from.
 + put the income brackets which we want to use but we leave -Inf and 0 as they are and add new incomes we want to use. Reason being in the event that we have data where a company ran a loss we can include the loss in the data frame.
 + age range for the data we are looking into is also inputted.
 
-##### Integrated Mean and SE Roll Ups.R
+#### Integrated Mean and SE Roll Ups.R
 + Creating rollup categories.
 
 
