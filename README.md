@@ -29,7 +29,7 @@ One answers a series of questions and then gets directed to how much they need t
 
  
 # **We used R to analyze the data.**
-====================================
+-------------------------------------
 
 #### *How to install R*
 
