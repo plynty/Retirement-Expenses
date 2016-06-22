@@ -39,16 +39,16 @@ One answers a series of questions and then gets directed to how much they need t
 * Follow the instructions of the installer.
 
 #### R packages used
-Integrated SE roll ups.R
+### Integrated Mean and SE.R
++ stringr 
++ reshape2
++ sqldf
++ RSQLite
++ plyr
 
-* StringR
+Integrated Mean and SE Roll ups.R
+* stringr
 
-### Integrated mean and SE.R
-stringr 
-reshape2
-sqldf
-RSQLite
-plyr
 
 # *Data*
 ===========
@@ -91,7 +91,8 @@ The aim of this was is to:
 
 ## **Mathematical Formulas Used**
 ================================
-
++ To get the mathematical formulas used download the 2014 documentation from this website http://www.bls.gov/cex/pumd/documentation/documentation14.zip and search in the Documentation and Data Dictionary for a file called CE PUMD Interview Users' Documentation.pdf.
++
 ## **Ratios obtained**
 =====================
 From the Integrated Mean and SE Roll Ups.R code program we are able to get the ratios of all the expenses for each category. They should add up to 100%.
