@@ -22,8 +22,10 @@ The BLS collects comprehensive information on the spending habits of Americans.
 
 Check out the Plynty homepage at https://www.plynty.com/#/
 ##### * How it works.
+One answers a series of questions and then gets directed to how much they need to save. 
 
 ##### * Demonstration Views
+
 
  
 # **We used R to analyze the data.**
@@ -37,6 +39,16 @@ Check out the Plynty homepage at https://www.plynty.com/#/
 * Follow the instructions of the installer.
 
 #### R packages used
+Integrated SE roll ups.R
+
+* StringR
+
+### Integrated mean and SE.R
+stringr 
+reshape2
+sqldf
+RSQLite
+plyr
 
 # *Data*
 ===========
@@ -66,16 +78,28 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 
 ## **Code used**
 ==========
+##### Integrated Mean and SE.R code
+The aim of this was is to:
++ input paramenters for the year whose data we will be using.
++ put the directory from which you will clone the date from.
++ put the income brackets which we want to use but we leave -Inf and 0 as they are and add new incomes we want to use. Reason being in the event that we have data where a company ran a loss we can include the loss in the data frame.
++ age range for the data we are looking into is also inputted.
+
+#### Integrated Mean and SE Roll Ups.R
++ Creating rollup categories.
+
 
 ## **Mathematical Formulas Used**
 ================================
 
 ## **Ratios obtained**
 =====================
+From the Integrated Mean and SE Roll Ups.R code program we are able to get the ratios of all the expenses for each category. They should add up to 100%.
 
 ## **Conclusion**
 ===============
-
+The whole procedure then gave us a calculation of the expenses in the most accurate way possible. Please feel free to leave us questions and you are welcome to analyze our code.
+Thanks.
 
 
 
