@@ -1,6 +1,6 @@
 # Assign a variable for the root directory
 # The same directory that was used in the Integrated Mean and SE.R file
-mydir <- "/Users/aarondyke/Documents/Retirement-Expenses"
+mydir <- "/Users/tndambakuwa/Retirement-Expenses"
 yr <- 2014
 
 # Assuming you have setup the Integrated Mean and SE.R file with the parameters you want
@@ -17,25 +17,27 @@ test$UCC<- str_trim(test$UCC)
 
 # Creating roll up categories
 foodAtHome <- c("FOODHO")
-foodAway <- c("FOODAW")
-alcoholicDrinks <- c("ALCBEV")
+foodAway <- c("FOODAW","ALCBEV")
 housing <- c("SHELTE","HHOPER","HKPGSU","HHFURN")
 utilities <- c("UTILS")
-apparelAndServices <- c("APPARE")
+clothingAndBeauty <- c("APPARE","PERSCA")
 transportation <- c("TRANS") #include airfare or not?
 healthCare <- c("MEDSER","DRUGS","MEDSUP")
-entertainment <- c("ENTRTA","READIN")
-personalCare <- c("PERSCA")
+entertainment <- c("ENTRTA","READIN","TOBACC")
 miscellaneous <- c("MISC")
 charitableAndFamilyGiving <- c("CASHCO")
-insurance <- c("HLTHIN","INSPEN")
+insurance <- c("HLTHIN")
 education <- c("EDUCAT")
-tobacco <- c("TOBACC")
 
-breakUps <- list(foodAtHome,foodAway,alcoholicDrinks,housing,utilities,apparelAndServices,transportation,healthCare,entertainment,personalCare,miscellaneous,charitableAndFamilyGiving,insurance,education,tobacco)
-names(breakUps) <- c("foodAtHome","foodAway","alcoholicDrinks","housing","utilities","apparelAndServices","transportation","healthCare","entertainment","personalCare","miscellaneous","charitableAndFamilyGiving","insurance","education","tobacco")
 
+
+
+breakUps <- list(foodAtHome,foodAway,housing,utilities,clothingAndBeauty,transportation,healthCare,entertainment,miscellaneous,charitableAndFamilyGiving,insurance,education)
+names(breakUps) <- c("foodAtHome","foodAway","housing","utilities","clothingAndBeauty","transportation","healthCare","entertainment","miscellaneous","charitableAndFamilyGiving","insurance","education")
+
+print("creating data frame")
 rollUpDF <- as.data.frame(matrix(rep(0, 7 + length(incomeLabels)), nrow=1))
+
 names(rollUpDF) <- colnames(test)
 
 # loops through the list to get the rows that have the right accronyms
@@ -47,6 +49,7 @@ for(x in 1:length(breakUps)){
 dropColumns <- c("estimate","level","group")
 rollUpDF <- rollUpDF[-c(1,which(rollUpDF$estimate == "SE")),!(names(rollUpDF)%in%dropColumns)]
 rownames(rollUpDF)<-NULL
+
 
 # creating names for plynty dataframe
 plyntyDFNamesString <- "category, all consumer units, all consumer units percentages, less than $0, Income bracket 0 percentages"
@@ -80,5 +83,17 @@ for(y in seq(3,ncol(plyntyDF),2)){
     plyntyDF[x,y]<-round(plyntyDF[x,y-1]/totalExpnd, digits = 3)
   }
 }
+
+
+plyntyPercentageDF <- plyntyDF[,c(1,seq(3,ncol(plyntyDF),2))]
+
+names(plyntyPercentageDF) <- names(plyntyDF)[c(1,seq(2,ncol(plyntyDF),2))]
+
+rownames(plyntyPercentageDF) <- NULL
+
+plyntyPercentageDF <- plyntyPercentageDF[2:nrow(plyntyPercentageDF),]
+#print(plyntyDF[,1])
+#rownames(plyntyPercentageDF) <- plyntyDF[1:nrow(plyntyDF),]
+
 
 

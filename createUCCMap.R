@@ -8,7 +8,7 @@ library(stringr) 	# load stringr package (manipulates character strings easily)
 year <- 2014
 
 # Assign a variable for the root directory
-mydir <- "/Users/aarondyke/Documents/Retirement-Expenses"
+mydir <- "/Users/tndambakuwa/Retirement-Expenses"
 
 # Create the root directory if it doesn't exist
 try(dir.create(mydir, showWarnings=FALSE))

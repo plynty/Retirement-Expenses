@@ -28,10 +28,10 @@
 year <- 2014
 
 # Assign a variable for the root directory
-mydir <- "/Users/aarondyke/Documents/Retirement-Expenses"
+mydir <- "/Users/tndambakuwa/Retirement-Expenses"
 
 #create new income brackets
-incomeBreakpoints <- c(-Inf,0,5000,10000,15000,20000,30000,40000,50000,70000)
+incomeBreakpoints <- c(-Inf,0,5000,25000,50000,75000,100000,150000,250000)
 
 # Create age range
 maxAge <- 64
