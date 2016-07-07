@@ -29,8 +29,6 @@ One answers a series of questions and then gets directed to how much they need t
 
  
 # **We used R to analyze the data.**
--------------------------------------
-
 ### *How to install R*
 
 * Go to CRAN, click download for whatever computer you are using(Linux, MacOS, Windows) and download the installer for the latest R version.
@@ -51,7 +49,6 @@ One answers a series of questions and then gets directed to how much they need t
 
 
 # *Data*
-===========
 ##### *How the data was gathered*
 The information for consumer expenditure for the year 2014 (the most recent public data from them) was gathered from the Bureau of Labor and Statistics. Both diary and interview survey data was used.
 
@@ -77,8 +74,6 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 
 
 ### **R Scrips modified**
-==========
-
 ##### Integrated Mean and SE.R
 
 The original R script would:
@@ -90,23 +85,18 @@ Our changes allowed the user to:
 + Toggle whether or not to exclude reitred individuals.
 
 ### **R Scrips created**
-==========
-
 ##### Integrated Mean and SE Roll Ups.R
 + Creates the rollup categories for the plynty expenditure categories which we will be focusing on.
 + Uses R objects created by the Integrated Mean and SE.R R Script
 
 
 ## **Mathematical Formulas Used**
-================================
 + To get the mathematical formulas used and analyzing them download the 2014 documentation from this website http://www.bls.gov/cex/pumd/documentation/documentation14.zip and search in the Documentation and Data Dictionary for a file called CE PUMD Interview Users' Documentation.pdf.
 
 ## **Ratios obtained**
-=====================
 From the Integrated Mean and SE Roll Ups.R code program we are able to get the ratios of all the expenses for each category. They should add up to 100% for every income bracket.
 
 ## **Conclusion**
-===============
 The whole procedure then gave us a calculation of the expenses in the most accurate way possible. Please feel free to leave us questions and you are welcome to analyze our code.
 Thanks.
 
