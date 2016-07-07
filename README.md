@@ -6,7 +6,7 @@
 Financial planning by your side, on your phone, in a convenient app.
 
 
-## Aim
+## Aim of this Project
 The current retirement approach does not include everyone especially those far from the reach of wealth management firms. Many people even if they decide to save, do not have an idea of how much they will need to save so they can live comfortably. When we all understand money better, intelligent financial plans can me made by all. By taking individual goals, peoples different incomes and projected expenses plynty is here to create individualized planning for investing so that everyone is comfortable in their retirement. We also want to ensure as closely as we can that people continue to live the lifestyle that they had before, if not better, when they retire.
 
 ##### Why is this necessary?
