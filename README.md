@@ -73,21 +73,28 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 * Interview data: http://www.bls.gov/cex/2014/csxintvw.pdf
 * Diary data: http://www.bls.gov/cex/2014/csxdiary.pdf
 
-# *How we added onto the data to get what we needed:*
+# *How we modified a BLS R Script to fit our Demographic:*
 
 
-### **Code used**
+### **R Scrips modified**
 ==========
 
-##### Integrated Mean and SE.R code
-The aim of this is to:
-+ input paramenters for the year whose data we will be using.
-+ put the directory from which you will clone the date from.
-+ put the income brackets which we want to use but we leave -Inf and 0 as they are and add new incomes we want to use. Reason being in the event that we have data where a company ran a loss we can include the loss in the data frame.
-+ age range for the data we are looking into is also inputted.
+##### Integrated Mean and SE.R
+
+The original R script would:
++ Calculate the weighted expenditures of the hardcoded income brackets
+
+Our changes allowed the user to:
++ Create custom income brackets (as long as the -Inf and 0 are kept constant).
++ Create a custom age range to subset by.
++ Toggle whether or not to exclude reitred individuals.
+
+### **R Scrips created**
+==========
 
 ##### Integrated Mean and SE Roll Ups.R
-+ Creating rollup categories for the expenditures which we will be focusing on.
++ Creates the rollup categories for the plynty expenditure categories which we will be focusing on.
++ Uses R objects created by the Integrated Mean and SE.R R Script
 
 
 ## **Mathematical Formulas Used**
