@@ -10,10 +10,10 @@ Financial planning by your side, on your phone, in a convenient app.
 The current retirement approach does not include everyone especially those far from the reach of wealth management firms. However, when we all understand money better, intelligent financial plans can me made by all. By taking individual goals, plynty is here to create individualized planning for investing so that everyone is comfortable in their retirement.
 
 ##### Why is this necessary?
-plynty(c) is a rigorous, helpful, cheap and affordable 24/7 application that saves on the fees to have middlemen. What most people do not realize is that over a long period of time, middleman can be receiving amounts almost equal to a quarter of ones savings. The goal of creating this financial application is to enable everyone plan for a retirement of their dream without having to spend a lot of money to plan on the retirement.
+plynty(c) is a rigorous, helpful, and affordable 24/7 application that saves on the fees to have middlemen. What most people do not realize is that over a long period of time, middleman can be receiving amounts almost equal to a quarter of ones savings. The goal of creating this financial application is to enable everyone plan for a retirement of their dream without having to spend a lot of money to plan on the retirement.
 
 ##### Methodology used
-Our goal is to calculate valid expenses using the Bureau of Labor and Statistics Consumer Expenditure information http://www.bls.gov/cex/ from the interview and survey data.
+Our goal is to calculate valid expenses using the Bureau of Labor and Statistics Consumer Expenditure information http://www.bls.gov/cex/ from the interview and diary survey data.
 ##### Why BLS data?
 The BLS collects comprehensive information on the spending habits of Americans. A lot of valuable economic information is obtained from the BLS.
 
