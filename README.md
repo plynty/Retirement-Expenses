@@ -87,10 +87,10 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 + Create age range for example,
                      `maxAge <- 64`
 
-                       minAge <- 55
+                                 minAge <- 55
 + Create boolean that says to exclude retired CUs or not for example,
 
-                    ` excludeRetired <- FALSE`
+                     excludeRetired <- FALSE
 ##### *After this, source the following files:*
 + Integrated Mean and SE Roll Ups.R
   + change the directory and the year if necessary
