@@ -107,7 +107,7 @@ Our changes allowed the user to:
 + Creates the rollup categories for the plynty expenditure categories which we will be focusing on.
 + Uses R objects created by the Integrated Mean and SE.R Script
 
-##### plyntyExpendiures.R
+##### plyntyExpenditures.R
 + File that contains the parameters for the chosen Demographics
 
 ##### createUCCMap.R
