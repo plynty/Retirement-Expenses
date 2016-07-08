@@ -79,11 +79,11 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
   
 *Assign a variable for the root directory for example,*
 
-                    ` mydir <- /Users/tndambakuwa/Retirement-Expenses`
+                     mydir <- /Users/tndambakuwa/Retirement-Expenses
 
  *Create income brackets which you intend to use for example,*
  
-                     ` incomeBreakpoints <- c(-Inf,0,5000,25000,50000,75000,100000,150000,250000)`
+                      incomeBreakpoints <- c(-Inf,0,5000,25000,50000,75000,100000,150000,250000)
 + Create age range for example,
                      `maxAge <- 64`
 
