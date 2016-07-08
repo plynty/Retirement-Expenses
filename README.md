@@ -1,7 +1,7 @@
 # Retirement-Expenses
 
 ##### 
-![plynty logo](https://pbs.twimg.com/profile_images/730095911687184384/C34I9Sh-.jpg=100*20)
+![plynty logo](https://pbs.twimg.com/profile_images/730095911687184384/C34I9Sh-.jpg)
 
 Financial planning by your side, on your phone, in a convenient app.
 
