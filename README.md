@@ -68,32 +68,33 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 * Diary data: http://www.bls.gov/cex/2014/csxdiary.pdf
 
 # *How we modified a BLS R Script to fit our Demographic:*
-+ Install R
-+ Clone this repo at https://github.com/plynty/Retirement-Expenses
-+ Edit Integrated Mean and SE.R file
 + Obtain the following files from the BLS website
   + Interview data -- "C:\CE_PUMD\2014\intrvw   
   + Diary data -- "C:\CE_PUMD\2014\diary        
   + IntStub2014.txt
-+ Change the directory to the one you will be using
-`Assign a variable for the root directory
-mydir <- "/Users/tndambakuwa/Retirement-Expenses"
- Create income brackets which you intend to use
++ Install R
++ Clone this repo at https://github.com/plynty/Retirement-Expenses
++ Edit Integrated Mean and SE.R file
+  + Change the directory to the one you will be using
+Assign a variable for the root directory for example,
+` mydir <- "/Users/tndambakuwa/Retirement-Expenses"
+ Create income brackets which you intend to use for example,
  ` incomeBreakpoints <- c(-Inf,0,5000,25000,50000,75000,100000,150000,250000)
-+ Create age range
++ Create age range for example,
  `maxAge <- 64
   minAge <- 55
-+ Create boolean that says to exclude retired CUs or not
++ Create boolean that says to exclude retired CUs or not for example,
 ` excludeRetired <- FALSE
 After this, source the following files:
 + Integrated Mean and SE Roll Ups.R
   + change the directory and the year if necessary
 + createUCCMap.R
+
 #### How to plot charts for visualization
 + Source the file plyntyBarPlot.R
   + Use the excel sheet to make a graph for comparison or use plotly.
 
-### **R Script modified**
+# **R Script modification Reasoning**
 ##### Integrated Mean and SE.R
 
 The original R script would:
