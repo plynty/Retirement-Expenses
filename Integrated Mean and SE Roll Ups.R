@@ -1,11 +1,3 @@
-# Assign a variable for the root directory
-# The same directory that was used in the Integrated Mean and SE.R file
-mydir <- "/Users/tndambakuwa/Retirement-Expenses"
-yr <- 2014
-
-# Assuming you have setup the Integrated Mean and SE.R file with the parameters you want
-#source(paste0(mydir,"/Integrated Mean and SE.R"), echo=TRUE)
-
 # Remove white space from title columns in both tab.out and stubfile
 tab.out$title <- str_trim(as.character(tab.out$title))
 stubfile$title <- str_trim(as.character(stubfile$title))
@@ -28,9 +20,6 @@ miscellaneous <- c("MISC")
 charitableAndFamilyGiving <- c("CASHCO")
 insurance <- c("HLTHIN")
 education <- c("EDUCAT")
-
-
-
 
 breakUps <- list(foodAtHome,foodAway,housing,utilities,clothingAndBeauty,transportation,healthCare,entertainment,miscellaneous,charitableAndFamilyGiving,insurance,education)
 names(breakUps) <- c("foodAtHome","foodAway","housing","utilities","clothingAndBeauty","transportation","healthCare","entertainment","miscellaneous","charitableAndFamilyGiving","insurance","education")

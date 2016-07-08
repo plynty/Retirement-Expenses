@@ -4,12 +4,6 @@ if(!("stringr" %in% rownames(installed.packages()))){
 } 
 library(stringr) 	# load stringr package (manipulates character strings easily)
 
-# Assign a variable for the year for which data will be tabulated
-year <- 2014
-
-# Assign a variable for the root directory
-mydir <- "/Users/tndambakuwa/Retirement-Expenses"
-
 # Create the root directory if it doesn't exist
 try(dir.create(mydir, showWarnings=FALSE))
 
