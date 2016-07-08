@@ -67,38 +67,30 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 * Interview data: http://www.bls.gov/cex/2014/csxintvw.pdf
 * Diary data: http://www.bls.gov/cex/2014/csxdiary.pdf
 
-# *How we modified a BLS R Script to fit our Demographic:*
-+ Obtain the following files from the BLS website
-  + Interview data -- C:\CE_PUMD\2014\intrvw   
-  + Diary data -- C:\CE_PUMD\2014\diary        
-  + IntStub2014.txt
+# *How to Run this Repository:*
 + Install R
 + Clone this repo at https://github.com/plynty/Retirement-Expenses
-+ Edit Integrated Mean and SE.R file
-  + Change the directory to the one you will be using
-  
-*Assign a variable for the root directory for example,*
-
-                     mydir <- /Users/tndambakuwa/Retirement-Expenses
-
- *Create income brackets which you intend to use for example,*
++ Edit the parameters portion of the plyntyExpenditures.R file
++ Source the plyntyExpenditures.R file
  
-                      incomeBreakpoints <- c(-Inf,0,5000,25000,50000,75000,100000,150000,250000)
-+ Create age range for example,
-                     `maxAge <- 64`
+##### How to edit the parameters in the plyntyExpenditures.R file
++ Assign a variable for the root directory (the location on lyour computer where you cloned this repository)
 
+                                  mydir <- /Users/tndambakuwa/Retirement-Expenses
+
++ Create income brackets which you intend to use.*
+  + Always keep -Inf and 0 in your incomeBreakpoints
+ 
+                                  incomeBreakpoints <- c(-Inf,0,5000,25000,50000,75000,100000,150000,250000)
++ Choose the minimum and maximum ages of the age range you wish to get expenditures for.
+ 
+                                  maxAge <- 64
                                   minAge <- 55
-+ Create boolean that says to exclude retired CUs or not for example,
++ Create boolean that says to exclude retired CUs or not.
 
-                        excludeRetired <- FALSE
-##### *After this, source the following files:*
-+ Integrated Mean and SE Roll Ups.R
-  + change the directory and the year if necessary
-+ createUCCMap.R
+                                  excludeRetired <- FALSE
 
-#### How to plot charts for visualization
-+ Source the file plyntyBarPlot.R
-  + Use the excel sheet to make a graph for comparison or use plotly.
+##### *After this, source the plyntyExpenditures.R file:*
 
 # **R Script modification Reasoning**
 ##### Integrated Mean and SE.R
@@ -116,12 +108,20 @@ Our changes allowed the user to:
 + Creates the rollup categories for the plynty expenditure categories which we will be focusing on.
 + Uses R objects created by the Integrated Mean and SE.R Script
 
+##### plyntyExpendiures.R
++ File that contains the parameters for the chosen Demographics
+
+##### createUCCMap.R
++ Creates a named list called abbreviationMap, which allows the user to see the text that a certain abbreviation within the tab.out file or roll up category stands for. For example:
+
+                                  > abbreviationMap$FOODTO
+                                  [1] "Food"
 
 ## **Mathematical Formulas Used**
 + To get the mathematical formulas used and analyzing them download the 2014 documentation from this website http://www.bls.gov/cex/pumd/documentation/documentation14.zip and search in the Documentation and Data Dictionary for a file called CE PUMD Interview Users' Documentation.pdf.
 
 ## **Ratios obtained**
-From the Integrated Mean and SE Roll Ups.R code program we are able to get the ratios of all the expenses for each category. They should add up to 100% for every income bracket.
+From the Integrated Mean and SE Roll Ups.R code program we are able to get the ratios of all the expenses for each category, visible in the plyntyPercentageDF). They should add up to 100% for every income bracket.
 
 ## **Conclusion**
 The whole procedure then gave us a calculation of the expenses in the most accurate way possible. Please feel free to leave us questions and you are welcome to analyze our code.
@@ -135,7 +135,3 @@ Builder
 Compendium Finance LLC
 Licence
 Copyright&copy; 2015. Licensed under the MIT license.
-
-
-
-  
