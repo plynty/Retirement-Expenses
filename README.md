@@ -1,7 +1,8 @@
 # Retirement-Expenses
 
 ##### 
-<img src="https://pbs.twimg.com/profile_images/730095911687184384/C34I9Sh-.jpg" alt="plynty logo" width="200"> Financial planning by your side, on your phone, in a convenient app.
+<img src="https://pbs.twimg.com/profile_images/730095911687184384/C34I9Sh-.jpg" alt="plynty logo" width="200"> 
+Financial planning by your side, on your phone, in a convenient app.
 
 ## Background of plynty
 plynty&copy; is a rigorous, helpful, and affordable 24/7 application that saves on the fees to have middlemen. What most people do not realize is that over a long period of time, middleman can be receiving amounts almost equal to a quarter of ones savings. The goal of creating this financial application is to enable everyone plan for a retirement of their dream without having to spend a lot of money to plan on the retirement.
