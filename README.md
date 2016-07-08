@@ -83,9 +83,11 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
  
  ` incomeBreakpoints <- c(-Inf,0,5000,25000,50000,75000,100000,150000,250000)`
 + Create age range for example,
- *`maxAge <- 64
-  minAge <- 55`*
+ `maxAge <- 64
+
+  minAge <- 55`
 + Create boolean that says to exclude retired CUs or not for example,
+
 ` excludeRetired <- FALSE`
 ##### *After this, source the following files:*
 + Integrated Mean and SE Roll Ups.R
