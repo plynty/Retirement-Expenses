@@ -73,7 +73,7 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 + Edit the parameters portion of the plyntyExpenditures.R file
 
 ##### How to edit the parameters in the plyntyExpenditures.R file
-+ Assign a variable for the root directory (the location on lyour computer where you cloned this repository)
++ Assign a variable for the root directory (the location on your computer where you cloned this repository)
 
                                   mydir <- /Users/tndambakuwa/Retirement-Expenses
 
