@@ -107,14 +107,20 @@ Our changes allowed the user to:
 + Creates the rollup categories for the plynty expenditure categories which we will be focusing on.
 + Uses R objects created by the Integrated Mean and SE.R Script
 
-##### plyntyExpenditures.R
-+ File that contains the parameters for the chosen Demographics
-
 ##### createUCCMap.R
 + Creates a named list called abbreviationMap, which allows the user to see the text that a certain abbreviation within the tab.out file or roll up category stands for. For example:
 
                                   > abbreviationMap$FOODTO
                                   [1] "Food"
+
+##### plyntyExpenditures.R
++ Comprehensive file with parameters for the chosen Demographics in question and sources the rest of the needed files. For example:
+
+                                 source("Integrated Mean and SE.R", echo = TRUE)
+                                 source("createUCCMap.R")
+                                 source("Integrated Mean and SE Roll Ups.R", echo = TRUE)
+
+
 
 ## **Mathematical Formulas Used**
 + To get the mathematical formulas used and analyzing them download the 2014 documentation from this website http://www.bls.gov/cex/pumd/documentation/documentation14.zip and search in the Documentation and Data Dictionary for a file called CE PUMD Interview Users' Documentation.pdf.
