@@ -90,7 +90,9 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
                                   excludeRetired <- FALSE
 + Source the plyntyExpenditures.R file
 # Data Visualization
+
 To be able to compare the data create a csv file which one can open with Microsoft Excel or Google Sheets so that you can draw graphs ad see the differences in expense percentages for different income brackets.
+
                                   write.csv<-(plyntyPercentageDF, "plyntyData.csv")
 
 
