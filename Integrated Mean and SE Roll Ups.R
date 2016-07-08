@@ -21,7 +21,7 @@ foodAway <- c("FOODAW","ALCBEV")
 housing <- c("SHELTE","HHOPER","HKPGSU","HHFURN")
 utilities <- c("UTILS")
 clothingAndBeauty <- c("APPARE","PERSCA")
-transportation <- c("TRANS") #include airfare or not?
+transportation <- c("TRANS") 
 healthCare <- c("MEDSER","DRUGS","MEDSUP")
 entertainment <- c("ENTRTA","READIN","TOBACC")
 miscellaneous <- c("MISC")
