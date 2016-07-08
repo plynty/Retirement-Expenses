@@ -71,8 +71,6 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 + Install R
 + Clone this repo at https://github.com/plynty/Retirement-Expenses
 + Edit the parameters portion of the plyntyExpenditures.R file
-+ Source the plyntyExpenditures.R file
- 
 ##### How to edit the parameters in the plyntyExpenditures.R file
 + Assign a variable for the root directory (the location on lyour computer where you cloned this repository)
 
@@ -89,8 +87,8 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 + Create boolean that says to exclude retired CUs or not.
 
                                   excludeRetired <- FALSE
++ Source the plyntyExpenditures.R file
 
-##### *After this, source the plyntyExpenditures.R file:*
 
 # **R Script modification Reasoning**
 ##### Integrated Mean and SE.R
