@@ -6,27 +6,23 @@
 Financial planning by your side, on your phone, in a convenient app.
 
 ## Background of plynty
-plynty&copy; is a rigorous, helpful, and affordable 24/7 application that saves on the fees to have middlemen. What most people do not realize is that over a long period of time, middleman can be receiving amounts almost equal to a quarter of ones savings. The goal of creating this financial application is to enable everyone plan for a retirement of their dream without having to spend a lot of money to plan on the retirement.
+plynty&copy; is a rigorous, helpful, and affordable 24/7 application that saves on the fees to have middlemen. What most people do not realize is that over a long period of time, middleman can be receiving amounts almost equal to a quarter of ones savings. The goal of creating this financial application is to enable everyone plan for a retirement of their dream without having to spend a lot of money planning for retirement.
 
 ##### Why is this necessary?
 The current retirement approach does not include everyone especially those far from the reach of wealth management firms. Many people even if they decide to save, do not have an idea of how much they will need to save so they can live comfortably. When we all understand money better, intelligent financial plans can me made by all. By taking individual goals, peoples different incomes and projected expenses plynty is here to create individualized planning for investing so that everyone is comfortable in their retirement. We also want to ensure as closely as we can that people continue to live the lifestyle that they had before, if not better, when they retire.
 
 ## Goal of this Project
-The plynty application needs a way to predict the expenditures that one may have when retired. Our goal is to calculate valid expenses, for users of plynty, using the Bureau of Labor and Statistics Consumer Expenditure information http://www.bls.gov/cex/ from the interview and diary survey data. Currently we are using the 2014 data but the data will be updated everytime the BLS releases new data sets from the Consumer Expenditure survey.
+When you create a retirement plan using plynty, the app starts by estimating your expense budget in retirement. The goal of this project is to calculate the best estimate of a person's expenses in retirement . The best source of data for estimating consumer expenditures is the Bureau of Labor and Statistics Consumer Expenditure Survey http://www.bls.gov/cex/. Currently we are using the 2014 data. Data in the plynty app  will be updated everytime the BLS releases new data sets from the Consumer Expenditure Survey.
 
 ##### Why BLS data?
-The BLS collects comprehensive information on the spending habits of Americans. The surveys from the BLS have accurate and impartial data that represents a nationwide and representative analysis. A lot of valuable economic information is obtained from the BLS.
+The BLS collects comprehensive information on the spending habits of Americans. The surveys from the BLS have accurate and impartial data that maps a nationwide and representative analysis. A lot of valuable economic information is obtained from the BLS.
 
 ##### The Demographic Selected
-We used the expenses of the age group 55-64, we assume those are the expenses that will be carried onto retirement and that using expenses before then would not be accurate as most of the expenses will be gone eg. college tuition. This is not to say that there are no people in the 55-64 age group who have educational expenses but we are trying to provide information as accurate as possible.
-
+We used the expenses of the age group 55-64. We assume those are the expenses that will be carried into retirement and that using expenses before then would not be accurate as most of the expenses will be gone eg. college tuition. This is not to say that there are no people in the 55-64 age group who have educational expenses but we are trying to provide information as accurate as possible.
 
 Check out the Plynty homepage at https://www.plynty.com/#/
-##### * How it works.
-One answers a series of questions and then gets directed to how much they need to save. 
 
 ##### * Demonstration Views
-
 
  
 # **We used R to analyze the data.**
@@ -72,9 +68,32 @@ We have used the ASCII(Comma-Delimited) data at the bottom of this page.
 * Diary data: http://www.bls.gov/cex/2014/csxdiary.pdf
 
 # *How we modified a BLS R Script to fit our Demographic:*
++ Install R
++ Clone this repo at https://github.com/plynty/Retirement-Expenses
++ Edit Integrated Mean and SE.R file
++ Obtain the following files from the BLS website
+  + Interview data -- "C:\CE_PUMD\2014\intrvw   
+  + Diary data -- "C:\CE_PUMD\2014\diary        
+  + IntStub2014.txt
++ Change the directory to the one you will be using
+`Assign a variable for the root directory
+mydir <- "/Users/tndambakuwa/Retirement-Expenses"
+ Create income brackets which you intend to use
+ ` incomeBreakpoints <- c(-Inf,0,5000,25000,50000,75000,100000,150000,250000)
++ Create age range
+ `maxAge <- 64
+  minAge <- 55
++ Create boolean that says to exclude retired CUs or not
+` excludeRetired <- FALSE
+After this, source the following files:
++ Integrated Mean and SE Roll Ups.R
+  + change the directory and the year if necessary
++ createUCCMap.R
+#### How to plot charts for visualization
++ Source the file plyntyBarPlot.R
+  + Use the excel sheet to make a graph for comparison or use plotly.
 
-
-### **R Scrips modified**
+### **R Script modified**
 ##### Integrated Mean and SE.R
 
 The original R script would:
@@ -83,12 +102,12 @@ The original R script would:
 Our changes allowed the user to:
 + Create custom income brackets (as long as the -Inf and 0 are kept constant).
 + Create a custom age range to subset by.
-+ Toggle whether or not to exclude reitred individuals.
++ Toggle whether or not to exclude retired individuals.
 
-### **R Scrips created**
+### **R Scripts created**
 ##### Integrated Mean and SE Roll Ups.R
 + Creates the rollup categories for the plynty expenditure categories which we will be focusing on.
-+ Uses R objects created by the Integrated Mean and SE.R R Script
++ Uses R objects created by the Integrated Mean and SE.R Script
 
 
 ## **Mathematical Formulas Used**
@@ -110,6 +129,6 @@ Compendium Finance LLC
 Licence
 Copyright&copy; 2015. Licensed under the MIT license.
 
-Notes
+
 
   
