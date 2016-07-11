@@ -120,10 +120,7 @@ The whole procedure then gave us a calculation of the expenses in the most accur
 Thanks.
 
 #####Background of plynty
-plynty&copy; is a rigorous, helpful, and affordable 24/7 application that saves on the fees and middlemen. What most people do not realize is that over a long period of time, middlemen can be receiving amounts almost equal to a quarter of ones retirement savings. The goal of plynty&copy; is to allow everyone the ability to plan for a retirement of their dream without having to waste a lot of money.
-
-##### Why is this necessary?
-The current retirement approach does not include everyone, especially those far from the reach of wealth management firms. Many people even if they decide to save, do not have an idea of how much they will need to save so they can live comfortably. This is where intelligent financial plans come into play. By taking individual goals, income amounts, and projected expenses plynty creates individualized planning for investing so that everyone is comfortable in their retirement. We also want to ensure as closely as we can that people continue to live the lifestyle that they had before, if not better, when they retire.
+plynty&copy; is financial planning app available on the App Store and Play Store.  plynty simplifies financial goal planning.
 
 <img src="https://pbs.twimg.com/profile_images/730095911687184384/C34I9Sh-.jpg" alt="plynty logo" width="200">
 Financial planning by your side, on your phone, in a convenient app.
