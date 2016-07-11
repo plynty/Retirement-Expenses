@@ -11,13 +11,8 @@ We used the expenses of the age group 55-64. We assume these expenses are reflec
 
 Check out the Plynty homepage at https://www.plynty.com/#/
 
-# **We used R to analyze the data.**
-### *How to install R*
-
-* Go to CRAN, click download for whatever computer you are using(Linux, MacOS, Windows) and download the installer for the latest R version.
-* Click the installer file.
-* Select language to be used during installation.
-* Follow the instructions of the installer.
+# **We used R for this analysis**
+The BLS provides a [sample R application](http://stats.bls.gov/cex/programs/r14.zip) to demonstrate how to process the public use micro data into meaningful results.  We started with this sample application and enhanced it to meet our study objectives.
 
 ### R packages used
 ##### Integrated Mean and SE.R
