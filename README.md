@@ -11,9 +11,6 @@ We used the expenses of the age group 55-64. We assume these expenses are reflec
 
 Check out the Plynty homepage at https://www.plynty.com/#/
 
-##### * Demonstration Views
-
- 
 # **We used R to analyze the data.**
 ### *How to install R*
 
